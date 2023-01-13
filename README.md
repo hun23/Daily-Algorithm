@@ -14,4 +14,7 @@
 
   > [BaekJoon: 25305, sorting, io(java:split())](https://www.acmicpc.net/problem/25305)
 
-  > [BaekJoon: 2108, sorting, java(double, round, Collections, ArrayList)](https://www.acmicpc.net/problem/2108)
+  > [BaekJoon: 2108, sorting, java(int/Integer, double, round, Collections, ArrayList, Hashmap)](https://www.acmicpc.net/problem/2108)
+
+  > [BaekJoon: 11650, sorting, java(Hashmap, ArrayList)](https://www.acmicpc.net/problem/11650)
+  
