@@ -16,5 +16,6 @@
 
   > [BaekJoon: 2108, sorting, java(int/Integer, double, round, Collections, ArrayList, Hashmap)](https://www.acmicpc.net/problem/2108)
 
-  > [BaekJoon: 11650, sorting, java(Hashmap, ArrayList)](https://www.acmicpc.net/problem/11650)
+  > [BaekJoon: 11650, sorting, java(Hashmap, ArrayList, split, Collections)](https://www.acmicpc.net/problem/11650)
   
+  > [Notion: Git](https://puzzling-libra-5dd.notion.site/TIL-0113-9423b9600f2c479c881a6359bc336c83)
