@@ -19,3 +19,6 @@
   > [BaekJoon: 11650, sorting, java(Hashmap, ArrayList, split, Collections)](https://www.acmicpc.net/problem/11650)
   
   > [Notion: Git](https://puzzling-libra-5dd.notion.site/TIL-0113-9423b9600f2c479c881a6359bc336c83)
+
+- 230114:
+  > [BaekJoon: Solved Ac Class 1](https://solved.ac/class/1)
