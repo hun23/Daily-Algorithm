@@ -24,4 +24,9 @@
   > [BaekJoon: Solved Ac Class 1](https://solved.ac/class/1)
       - 1152: String.trim(), String.isEmpty()
       - 1157: String.toCharArray(), ascii
+
+- 230115:
+  > [BaekJoon: Solved Ac Class 1](https://solved.ac/class/1)
+      - 1152: String.trim(), String.isEmpty()
+      - 1157: String.toCharArray(), ascii
       
