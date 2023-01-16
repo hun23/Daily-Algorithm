@@ -22,16 +22,23 @@
 
 - 230114:
   > [BaekJoon: Solved Ac Class 1](https://solved.ac/class/1)
-      - 1152: String.trim(), String.isEmpty()
-      - 1157: String.toCharArray(), ascii
+
+    - 1152: String.trim(), String.isEmpty()
+    - 1157: String.toCharArray(), ascii
 
 - 230115:
   > [BaekJoon: Solved Ac Class 1](https://solved.ac/class/1)
-      - 1152: String.trim(), String.isEmpty()
-      - 1157: String.toCharArray(), ascii
+
+    - 1152: String.trim(), String.isEmpty()
+    - 1157: String.toCharArray(), ascii
 
 - 230116:
-  > [BaekJoon: Solved Ac Class 1](https://solved.ac/class/1)
-      - 10809: String.indexOf()
-      - 10951: EOF
-      - 11654: BufferedReader.read()
+  > [BaekJoon: Solved Ac Class 1 (*finished*)](https://solved.ac/class/1)
+
+  - 10809: String.indexOf()
+  - 10951: EOF
+  - 11654: BufferedReader.read()
+
+  > [Baekjoon: 1018, Python(.strip(), copy.deepcopy(), bruteforce)](https://www.acmicpc.net/problem/1018)
+
+  - Python: [더 나은 풀이](https://bambbang00.tistory.com/43)와 비교하기 -> Java에 적용
