@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
+import java.nio.Buffer;
 
 public class class_one {
 	public void n1001() throws IOException {
@@ -336,6 +337,242 @@ public class class_one {
             bw.write("descending\n");
         }
         
+        bw.flush();
+        bw.close();
+    }
+    
+    public void n3052() throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int[] arr = new int[42];
+        for (int i = 0; i<10; i++) {
+            int num = Integer.parseInt(br.readLine());
+            arr[num % 42] = 1;
+        }
+        int sum = 0;
+        for (int j : arr) {
+            sum += j;
+        }
+        bw.write(String.valueOf(sum) + "\n");
+        bw.flush();
+        bw.close();
+    }
+    
+    public void n8958() throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int t = Integer.parseInt(br.readLine());
+        for (int i = 0; i < t; i++) {
+            char[] ox = br.readLine().toCharArray();
+            int point = 0;
+            int sum = 0;
+            for (char c : ox) {
+                if (c == 'O') {
+                    point += 1;
+                    sum += point;
+                } else {
+                    point = 0;
+                }
+            }
+            bw.write(String.valueOf(sum) + "\n");
+        }
+        bw.flush();
+        bw.close();
+    }
+    
+    public void n9498() throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int t = Integer.parseInt(br.readLine());
+        if (t >= 90) {
+            bw.write("A\n");
+        } else if (t >= 80) {
+            bw.write("B\n");
+        } else if (t >= 70) {
+            bw.write("C\n");
+        } else if (t >= 60) {
+            bw.write("D\n");
+        } else {
+            bw.write("F\n");
+        }
+        bw.flush();
+        bw.close();
+    }
+    
+    public void n10171() throws IOException {
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        bw.write("\\    /\\\n");
+        bw.write(" )  ( ')\n");
+        bw.write("(  /  )\n");
+        bw.write(" \\(__)|\n");
+        bw.flush();
+        bw.close();
+    }
+    
+    public void n10172() throws IOException {
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        bw.write("|\\_/|\n");
+        bw.write("|q p|   /}\n");
+        bw.write("( 0 )\"\"\"\\\n");
+        bw.write("|\"^\"`    |\n");
+        bw.write("||_/=\\\\__|\n");
+        bw.flush();
+        bw.close();
+    }
+    
+    public void n10809() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String arr = br.readLine();
+        char[] abc = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+        for (char a : abc) {
+            int num = arr.indexOf(a);
+            bw.write(String.valueOf(num));
+            if (a != 'z') {
+                bw.write(" ");
+            }
+        }
+        bw.flush();
+        bw.close();
+    }
+    
+    public void n10818() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int n = Integer.parseInt(br.readLine());
+        String[] inp = br.readLine().split(" ");
+        int mx = Integer.parseInt(inp[0]);
+        int mn = Integer.parseInt(inp[0]);
+        for (int i = 1; i < n; i++) {
+            int num = Integer.parseInt(inp[i]);
+            if (num > mx) {
+                mx = num;
+            } 
+            if (num < mn) {
+                mn = num;
+            }
+        }
+        bw.write(String.valueOf(mn) + " " + String.valueOf(mx) + "\n");
+        bw.flush();
+        bw.close();
+    }
+    
+    public void n10869() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String[] inp = br.readLine().split(" ");
+        int a = Integer.parseInt(inp[0]);
+        int b = Integer.parseInt(inp[1]);
+        bw.write(String.valueOf(a + b) + "\n");
+        bw.write(String.valueOf(a - b) + "\n");
+        bw.write(String.valueOf(a * b) + "\n");
+        bw.write(String.valueOf(a / b) + "\n");
+        bw.write(String.valueOf(a % b) + "\n");
+        bw.flush();
+        bw.close();
+    }
+    
+    public void n10871() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String[] nx = br.readLine().split(" ");
+        int n = Integer.parseInt(nx[0]);
+        int x = Integer.parseInt(nx[1]);
+        int[] arr = new int[n];
+        String[] inp = br.readLine().split(" ");
+        int i = 0;
+        for (String s : inp) {
+            int num = Integer.parseInt(s);
+            if (num < x) {
+                arr[i] = num;
+                i += 1;
+            }
+        }
+        for (int j = 0; j < n; j++) {
+            if (arr[j] != 0) {
+                bw.write(String.valueOf(arr[j]));
+                if (j + 1 != n && arr[j + 1] != 0) {
+                    bw.write(" ");
+                }
+            }
+        }
+        bw.flush();
+        bw.close();
+    }
+
+    public void n10950() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int t = Integer.parseInt(br.readLine());
+        for (int i = 0; i < t; i++) {
+            String[] inp = br.readLine().split(" ");
+            int a = Integer.parseInt(inp[0]);
+            int b = Integer.parseInt(inp[1]);
+            bw.write(String.valueOf(a + b) + "\n");
+        }
+        bw.flush();
+        bw.close();
+    }
+
+    public void n10951() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String inp;
+        while ((inp=br.readLine()) != null) {
+            int a = Integer.parseInt(inp.split(" ")[0]);
+            int b = Integer.parseInt(inp.split(" ")[1]);
+            bw.write(String.valueOf(a + b) + "\n");
+        }
+        bw.flush();
+        bw.close();
+    }
+
+    public void n10952() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String inp;
+        while ((inp=br.readLine()) != null) {
+            int a = Integer.parseInt(inp.split(" ")[0]);
+            int b = Integer.parseInt(inp.split(" ")[1]);
+            if (a == 0 && b == 0) {
+                break;
+            }
+            bw.write(String.valueOf(a + b) + "\n");
+        }
+        bw.flush();
+        bw.close();
+    }
+
+    public void n10998() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String inp = br.readLine();
+        int a = Integer.parseInt(inp.split(" ")[0]);
+        int b = Integer.parseInt(inp.split(" ")[1]);
+        bw.write(String.valueOf(a * b) + "\n");
+        bw.flush();
+        bw.close();
+    }
+
+    public void n11654() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int inp = br.read();
+        bw.write(String.valueOf(inp) + "\n");
+        bw.flush();
+        bw.close();
+    }
+
+    public void n11720() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String a = br.readLine();
+        char[] c_arr = br.readLine().toCharArray();
+        int sum = 0;
+        for (char c : c_arr) {
+            sum += c - '0';
+        }
+        bw.write(String.valueOf(sum) + "\n");
         bw.flush();
         bw.close();
     }
