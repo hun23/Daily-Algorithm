@@ -38,9 +38,12 @@
   - 10809: String.indexOf()
   - 10951: EOF
   - 11654: BufferedReader.read()
+  > [BaekJoon: Solved Ac Class 2](https://solved.ac/class/2)
+  
+  - > [Baekjoon: 1018, **Bruteforce**, Python(.strip(), copy.deepcopy())](https://www.acmicpc.net/problem/1018)
 
-  > [Baekjoon: 1018, **Bruteforce**, Python(.strip(), copy.deepcopy())](https://www.acmicpc.net/problem/1018)
+    - Python: [더 나은 풀이](https://bambbang00.tistory.com/43)와 비교하기 -> Java에 적용
 
-  - Python: [더 나은 풀이](https://bambbang00.tistory.com/43)와 비교하기 -> Java에 적용
+  - > [Baekjoon: 1181, Java(String.equals())](https://www.acmicpc.net/problem/1181)
 
-  > [Baekjoon: 1181, Java(String.equals())](https://www.acmicpc.net/problem/1181)
+  - > [Baekjoon: 1259](https://www.acmicpc.net/problem/1181)
