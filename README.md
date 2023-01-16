@@ -39,6 +39,8 @@
   - 10951: EOF
   - 11654: BufferedReader.read()
 
-  > [Baekjoon: 1018, Python(.strip(), copy.deepcopy(), bruteforce)](https://www.acmicpc.net/problem/1018)
+  > [Baekjoon: 1018, **Bruteforce**, Python(.strip(), copy.deepcopy())](https://www.acmicpc.net/problem/1018)
 
   - Python: [더 나은 풀이](https://bambbang00.tistory.com/43)와 비교하기 -> Java에 적용
+
+  > [Baekjoon: 1181, Java(String.equals())](https://www.acmicpc.net/problem/1181)
