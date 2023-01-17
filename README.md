@@ -66,3 +66,9 @@
   - > [Baekjoon: 1966, **Queue**](https://www.acmicpc.net/problem/1966)
 
   - > [Baekjoon: 1978, **Prime Numbers**](https://www.acmicpc.net/problem/1978)
+
+  - > [Baekjoon: 2164, **Queue**](https://www.acmicpc.net/problem/2164)
+
+    Python: 일반적인 list 사용시 시간초과 발생, `from Collections import deque`와 `deque.popleft()`사용필요
+
+    Java: 마찬가지로 `import java.util.Queue, import java.util.LinkedList` 후, `queue.poll()`, `queue.remove()` 사용 필요
