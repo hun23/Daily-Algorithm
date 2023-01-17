@@ -72,3 +72,6 @@
     Python: 일반적인 list 사용시 시간초과 발생, `from Collections import deque`와 `deque.popleft()`사용필요
 
     Java: 마찬가지로 `import java.util.Queue, import java.util.LinkedList` 후, `queue.poll()`, `queue.remove()` 사용 필요
+ - > [Baekjoon: 2231, **Bruteforce**](https://www.acmicpc.net/problem/2231)
+
+ - > [Baekjoon: 2292](https://www.acmicpc.net/problem/2292)
