@@ -53,3 +53,7 @@
   - > [Baekjoon: 1654, **이진탐색**](https://www.acmicpc.net/problem/1654)
 
     - Java: int로 하면 overflow로 corner case에서 답이 나오지 않는다, 변수 자료형을 long으로 바꾸어서 해결
+
+- 230117:
+  > [Baekjoon: Solved Ac Class 2](https://solved.ac/class/2)
+  > [Baekjoon: 1874, **Stack**](https://www.acmicpc.net/problem/1874)

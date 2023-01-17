@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class aaa {
+public class n1874 {
 	public void run() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
