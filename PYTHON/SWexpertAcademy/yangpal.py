@@ -38,20 +38,31 @@ for _ in range(t):
     # global li
     # li = []
     count = 0
-    for on_right_num in range(0, n + 1):
+    for on_right_num in tqdm(range(0, n + 1)):
         for com in combinations(weights, on_right_num):
             if weights_sum / 2 >= sum(com):
                 # 여기서부터 순서 고려
                 # print(f"n:{on_right_num}, com:{com}")
                 # visited = [False for _ in range(n)]
                 # recursion(visited, weights, com, n, 0, 0)
+                di = dict()
                 for per in permutations(weights, len(weights)):
                     changing_sum = 0
+                    right_sum_left = sum(com)
+                    li = []
                     for w in per:
                         if w in com:
-                            changing_sum -= w
+                            li.append(-1 * w)
                         else:
-                            changing_sum += w
+                            li.append(w)
+                        if di.get(tuple(li)):
+                            changing_sum = di[tuple(li)]
+                        else:
+                            if w in com:
+                                changing_sum -= w
+                            else:
+                                changing_sum += w
+                            di[tuple(li)] = changing_sum
                         if changing_sum < 0:
                             break
                     else:
