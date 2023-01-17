@@ -58,3 +58,6 @@
   - > [Baekjoon: 1874, **Stack**](https://www.acmicpc.net/problem/1874)
 
   - > [Baekjoon: 1920, **Binary Search**](https://www.acmicpc.net/problem/1920)
+
+  - > [Baekjoon: 1929, **Prime Numbers**](https://www.acmicpc.net/problem/1929)
+    에라토스테네스의 체 구현
