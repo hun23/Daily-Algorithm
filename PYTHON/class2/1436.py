@@ -2,13 +2,14 @@ def doom(i):
     s = str(i)
     doom_count = 0
     for c in s:
-        if c == '6':
+        if c == "6":
             doom_count += 1
         else:
             doom_count = 0
         if doom_count >= 3:
             return True
     return False
+
 
 n = int(input())
 count = 0

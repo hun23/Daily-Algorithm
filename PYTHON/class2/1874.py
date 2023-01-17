@@ -1,14 +1,17 @@
 import sys
 
+
 def push(ascend, temp, output):
     output.append("+")
     temp.append(ascend[0])
     del ascend[0]
 
+
 def pop(temp, arr, output):
     output.append("-")
     arr.append(temp[-1])
     del temp[-1]
+
 
 n = int(input())
 inp = []

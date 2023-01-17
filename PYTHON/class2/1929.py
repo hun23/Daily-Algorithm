@@ -22,7 +22,7 @@ is_prime_arr = [True for _ in range(n + 1)]
 is_prime_arr[0] = False
 is_prime_arr[1] = False
 for i in range(2, n + 1):
-    if i ** 2 > n:
+    if i**2 > n:
         break
     if is_prime_arr[i] == True:
         for j in range(i + i, n + 1, i):

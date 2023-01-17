@@ -6,7 +6,7 @@ while True:
     if inp == "0":
         break
     _len = len(inp)
-    for i in range(_len//2):
+    for i in range(_len // 2):
         if inp[i] != inp[_len - 1 - i]:
             p = False
             break

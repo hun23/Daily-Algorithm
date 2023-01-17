@@ -1,6 +1,7 @@
 import sys
 import copy
 
+
 def check_cell(arr, i, x, j, y):
     count = 0
     color = "W"
@@ -26,12 +27,14 @@ def check_cell(arr, i, x, j, y):
             count += 1
     return count
 
+
 def check_board(arr, i, j):
     count = 0
     for x in range(8):
         for y in range(8):
             count += check_cell(arr, i, x, j, y)
     return count
+
 
 n, m = map(int, input().split())
 arr = []

@@ -1,4 +1,5 @@
 import sys
+
 # import time
 
 # f = open("./TESTCASE/2108.txt")
@@ -35,8 +36,8 @@ keys.sort()
 # end = time.time()
 # print(f"keysort{start - end}")
 
-print(round(sum/n))
-print(li[round((n-1)/2)])
+print(round(sum / n))
+print(li[round((n - 1) / 2)])
 if len(keys) != 1:
     print(keys[1])
 else:

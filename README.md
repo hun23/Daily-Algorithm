@@ -60,4 +60,7 @@
   - > [Baekjoon: 1920, **Binary Search**](https://www.acmicpc.net/problem/1920)
 
   - > [Baekjoon: 1929, **Prime Numbers**](https://www.acmicpc.net/problem/1929)
+
     에라토스테네스의 체 구현
+  
+  - > [Baekjoon: 1966, **Queue**](https://www.acmicpc.net/problem/1966)

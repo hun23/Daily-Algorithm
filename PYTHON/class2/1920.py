@@ -24,7 +24,7 @@ for m_num in m_arr:
     if n_arr[lo] == m_num or n_arr[hi] == m_num:
         found = 1
     else:
-        while (lo + 1 < hi):
+        while lo + 1 < hi:
             mid = int((lo + hi) / 2)
             # print(f"lo={lo} hi={hi}")
             # print(f"mid:{n_arr[mid]}")

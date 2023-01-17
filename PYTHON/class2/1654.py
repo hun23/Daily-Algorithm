@@ -1,5 +1,6 @@
 import sys
 
+
 def ok(arr, _len, n):
     count = 0
     for k in arr:
@@ -8,6 +9,7 @@ def ok(arr, _len, n):
         return True
     else:
         return False
+
 
 k, n = map(int, input().split())
 arr = []
@@ -18,7 +20,7 @@ lo = 1
 if ok(arr, lo, n) == ok(arr, hi, n):
     print(hi)
 else:
-    while (lo + 1 < hi):
+    while lo + 1 < hi:
         mid = (lo + hi) // 2
         if ok(arr, lo, n) == ok(arr, mid, n):
             lo = mid

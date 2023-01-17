@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 import java.util.Arrays;
 
-public class aaa {
+public class n1920 {
 	public void run() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
