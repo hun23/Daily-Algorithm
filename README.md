@@ -64,3 +64,5 @@
     에라토스테네스의 체 구현
   
   - > [Baekjoon: 1966, **Queue**](https://www.acmicpc.net/problem/1966)
+
+  - > [Baekjoon: 1978, **Prime Numbers**](https://www.acmicpc.net/problem/1978)
