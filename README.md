@@ -105,4 +105,4 @@
 
   - > [Baekjoon: 11050, Combination](https://www.acmicpc.net/problem/11050)
 
-    개념에 대해 더 공부할 필요가 있을 것 같다.
+    이항계수 개념에 대해 더 공부할 필요가 있을 것 같다.

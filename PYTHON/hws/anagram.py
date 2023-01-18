@@ -1,9 +1,4 @@
-# A.    입력 예시 
-# ['eat','tea','tan','ate','nat','bat']
-
-# B.    출력 예시 
-# [ ['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat'] ] 
-
+# 내 답안
 def sort_word(s):
     s = list(s)
     s.sort()
@@ -24,6 +19,17 @@ def group_anagrams(inp):
     print(answer)
 
 
-inp = ['eat','tea','tan','ate','nat','bat']
-group_anagrams(inp)
-    
+# 모범답안
+def anagram(words):
+    di = dict()
+    for word in words:
+        key = ''.join(sorted(word))
+        if di.get(key) == None:
+            di[key] = []
+        di[key].append(word)
+    print(list(di.values()))
+
+# 본문
+words = ['eat','tea','tan','ate','nat','bat']
+group_anagrams(words)
+anagram(words)
