@@ -75,3 +75,16 @@
  - > [Baekjoon: 2231, **Bruteforce**](https://www.acmicpc.net/problem/2231)
 
  - > [Baekjoon: 2292](https://www.acmicpc.net/problem/2292)
+
+- 230118:
+  - > [Baekjoon: 2609](https://www.acmicpc.net/problem/2609)
+    
+    최대공약수(GCD) & 최소공배수(LCM)
+  - > [Baekjoon: 2751, sorting](https://www.acmicpc.net/problem/2751)
+  
+  - > [Baekjoon: 2798, **Brute Force**](https://www.acmicpc.net/problem/2798)
+
+    재귀함수로 구현
+  - > [Baekjoon: 4153](https://www.acmicpc.net/problem/4153)
+  
+  - > [Baekjoon: 9012](https://www.acmicpc.net/problem/9012)
