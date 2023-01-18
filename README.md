@@ -44,6 +44,8 @@
 
   - > [Baekjoon: 1181, Java(String.equals())](https://www.acmicpc.net/problem/1181)
 
+    Java: 이중 배열 선언하는 방법
+
   - > [Baekjoon: 1259](https://www.acmicpc.net/problem/1181)
 
   - > [Baekjoon: 1436, **Bruteforce**](https://www.acmicpc.net/problem/1436)
@@ -90,3 +92,5 @@
   - > [Baekjoon: 9012](https://www.acmicpc.net/problem/9012)
 
   - > [Baekjoon: 10250](https://www.acmicpc.net/problem/10250)
+
+  - > [Baekjoon: 10814, sorting](https://www.acmicpc.net/problem/10814)
