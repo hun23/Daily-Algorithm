@@ -100,3 +100,9 @@
     파이썬 str.join()사용, 아직 못풀었다.... 일단 패스
 
   - > [Baekjoon: 11866, queue](https://www.acmicpc.net/problem/11866)
+
+    queue를 이용한 원형(=순환하는) 자료 다루기, Java: StringBuilder
+
+  - > [Baekjoon: 11050, Combination](https://www.acmicpc.net/problem/11050)
+
+    개념에 대해 더 공부할 필요가 있을 것 같다.
