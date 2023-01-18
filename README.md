@@ -84,7 +84,9 @@
   
   - > [Baekjoon: 2798, **Brute Force**](https://www.acmicpc.net/problem/2798)
 
-    재귀함수로 구현
+    재귀함수로 구현.... 쉬운 방법이 있을지도?
   - > [Baekjoon: 4153](https://www.acmicpc.net/problem/4153)
   
   - > [Baekjoon: 9012](https://www.acmicpc.net/problem/9012)
+
+  - > [Baekjoon: 10250](https://www.acmicpc.net/problem/10250)
