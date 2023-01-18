@@ -5,7 +5,7 @@ def sort_word(s):
     s = str(s)
     return s
 
-def group_anagrams(inp):
+def my_anagrams(inp):
     inp_sorted = [sort_word(x) for x in inp]
     inp_sorted = set(inp_sorted)
     answer = []
@@ -23,7 +23,7 @@ def group_anagrams(inp):
 def anagram(words):
     di = dict()
     for word in words:
-        key = ''.join(sorted(word))
+        key = ''.join(sorted(word)) # 내 sort_word와 같은 기능
         if di.get(key) == None:
             di[key] = []
         di[key].append(word)
@@ -31,5 +31,5 @@ def anagram(words):
 
 # 본문
 words = ['eat','tea','tan','ate','nat','bat']
-group_anagrams(words)
+my_anagrams(words)
 anagram(words)
