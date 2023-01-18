@@ -94,3 +94,7 @@
   - > [Baekjoon: 10250](https://www.acmicpc.net/problem/10250)
 
   - > [Baekjoon: 10814, sorting](https://www.acmicpc.net/problem/10814)
+
+  - > [Baekjoon: 10816, sorting, **Binary Search**, hashmap](https://www.acmicpc.net/problem/10816)
+  
+    파이썬 str.join()사용
