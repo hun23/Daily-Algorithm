@@ -1,0 +1,62 @@
+#include <stdio.h>
+ 
+int n;
+int arr[100];
+int flag[100]; // 0이면 아직, 1 이면 이미나온숫 자 
+int answer;
+int sum;
+ 
+int pow[9] = {1,2,4,8,16,32,64,128,256};
+int fact[9] = { 0, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880 };
+ 
+ 
+void check(int cnt, int left, int right) {
+    if(n==cnt){
+        answer++;
+        return;
+    }
+    if(left >= sum-left) {
+        answer+=pow[n-cnt]*fact[n-cnt];
+        return;
+    }
+     
+    else {
+        for(int i = 0;i<n;i++) {
+            if(flag[i]==1) continue;
+            flag[i] = 1;
+            check(cnt+1,left+arr[i],right);
+            if(right+arr[i] <= left) check(cnt+1,left,right+arr[i]);
+            flag[i] = 0;
+              
+        }
+    }
+}
+ 
+int main(void)
+{
+    int test_case;
+    int T;
+ 
+    //freopen("sample_input.txt", "r", stdin);
+ 
+    setbuf(stdout, NULL);
+    scanf("%d", &T);
+ 
+    for (test_case = 1; test_case <= T; ++test_case)
+    {
+        scanf("%d",&n);
+         
+        sum = 0;
+        for(int i=0;i<n;i++) {
+            scanf("%d",&arr[i]);
+            sum += arr[i];
+        }
+         
+        answer = 0;
+        check(0,0,0);
+         
+        printf("#%d %d\n",test_case,answer);
+         
+    }
+    return 0; //정상종료시 반드시 0을 리턴해야 합니다.
+}

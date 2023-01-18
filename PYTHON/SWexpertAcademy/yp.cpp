@@ -1,0 +1,50 @@
+#include <stdio.h>
+#define N 10
+const int MAXN = 20000;
+static int ans, n, map[N];
+static int visit[N];
+static int D[MAXN];
+static int mul[N] = {1, 3, 9, 27, 81, 243, 729, 2187, 6561};
+static int mul2[N] = {2, 6, 18, 54, 162, 486, 1458, 4374, 13122};
+
+inline int go(int left, int right, int depth, int state)
+{
+	if (depth == n)
+		return 1;
+
+	int &ret = D[state];
+	if (ret > 0)
+		return ret;
+
+	int cnt = 0;
+	for (register int i = 0; i < n; i++)
+	{
+		if (!visit[i])
+		{
+			visit[i] = true;
+			cnt += go(left + map[i], right, depth + 1, state + mul[i]);
+			if (left >= right + map[i])
+				cnt += go(left, right + map[i], depth + 1, state + mul2[i]);
+			visit[i] = false;
+		}
+	}
+	return ret = cnt;
+}
+
+int main()
+{
+	int tc, k;
+	scanf("%d", &tc);
+	k = tc;
+	for (; tc > 0; tc--)
+	{
+		ans = 0;
+		scanf("%d", &n);
+		for (register int i = 0; i < n; i++)
+			scanf("%d", &map[i]);
+		for (register int i = 0; i < MAXN; i++)
+			D[i] = 0;
+		printf("#%d %d\n", k + 1 - tc, go(0, 0, 0, 0));
+	}
+	return 0;
+}
