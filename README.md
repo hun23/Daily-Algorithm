@@ -97,4 +97,6 @@
 
   - > [Baekjoon: 10816, sorting, **Binary Search**, hashmap](https://www.acmicpc.net/problem/10816)
   
-    파이썬 str.join()사용
+    파이썬 str.join()사용, 아직 못풀었다.... 일단 패스
+
+  - > [Baekjoon: 11866, queue](https://www.acmicpc.net/problem/11866)
