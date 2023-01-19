@@ -130,5 +130,8 @@
 
     자바: ***디버깅 문제로 패스***
 
+ - > [Baekjoon: 10773, sorting](https://www.acmicpc.net/problem/10773)
+
+    자바: ***디버깅 문제로 패스***
 
  
