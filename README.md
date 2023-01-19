@@ -97,7 +97,8 @@
 
   - > [Baekjoon: 10816, sorting, **Binary Search**, hashmap](https://www.acmicpc.net/problem/10816)
   
-    파이썬 str.join()사용, 아직 못풀었다.... 일단 패스
+    파이썬 str.join()사용
+    ***아직 못풀었다.... 일단 패스***
 
   - > [Baekjoon: 11866, queue](https://www.acmicpc.net/problem/11866)
 
@@ -106,3 +107,12 @@
   - > [Baekjoon: 11050, Combination](https://www.acmicpc.net/problem/11050)
 
     이항계수 개념에 대해 더 공부할 필요가 있을 것 같다.
+
+  - > [Baekjoon: 10828, stack, class](https://www.acmicpc.net/problem/10828)
+
+    파이썬: 통과
+    자바: ***디버깅 문제로 패스***
+
+  - > [Baekjoon: 2775, **Dynamic Programming**](https://www.acmicpc.net/problem/2775)
+    파이썬: 리스트 컴프리헨션, 삼항연산자
+    자바: ***디버깅 문제로 패스***
