@@ -6,6 +6,13 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Launch main",
+			"request": "launch",
+			"mainClass": "main",
+			"projectName": "algorithm-TIL_e4deb56a"
+		},
+		{
+			"type": "java",
 			"name": "Launch Current File",
 			"request": "launch",
 			"mainClass": "${file}"
