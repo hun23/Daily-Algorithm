@@ -119,7 +119,7 @@
 
   - > [Baekjoon: 10989, sorting](https://www.acmicpc.net/problem/10989)
 
-     - 메모리 제한이 심한 문제, 조건에 따른 해결방법 필요 / 자바: ***디버깅 문제로 패스***
+     - 메모리 제한이 심한 문제, 조건에 따른 해결방법 필요
 
   - > [Baekjoon: 2869, sorting](https://www.acmicpc.net/problem/2869)
 
