@@ -106,7 +106,7 @@
 
   - > [Baekjoon: 11050, Combination](https://www.acmicpc.net/problem/11050)
 
-     - 이항계수 개념에 대해 더 공부할 필요가 있을 것 같다.
+     - **이항계수** 개념에 대해 더 공부할 필요가 있을 것 같다.
 
   - > [Baekjoon: 10828, stack, class](https://www.acmicpc.net/problem/10828)
 
@@ -115,7 +115,7 @@
   - > [Baekjoon: 2775, **Dynamic Programming**](https://www.acmicpc.net/problem/2775)
       
      - 파이썬: 리스트 컴프리헨션, 삼항연산자
-      자바: 이중 int 배열
+     - 자바: 삼항연산자, 이중 int 배열
 
   - > [Baekjoon: 10989, sorting](https://www.acmicpc.net/problem/10989)
 
