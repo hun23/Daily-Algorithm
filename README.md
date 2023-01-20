@@ -111,11 +111,11 @@
   - > [Baekjoon: 10828, stack, class](https://www.acmicpc.net/problem/10828)
 
     파이썬: 통과
-    자바: ***디버깅 문제로 패스***
+    자바: 클래스 구현 및 static 개념 다시 확인
 
   - > [Baekjoon: 2775, **Dynamic Programming**](https://www.acmicpc.net/problem/2775)
     파이썬: 리스트 컴프리헨션, 삼항연산자
-    자바: ***디버깅 문제로 패스***
+    자바: 이중 int 배열
 
  - > [Baekjoon: 10989, sorting](https://www.acmicpc.net/problem/10989)
 
