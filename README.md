@@ -123,11 +123,7 @@
 
   - > [Baekjoon: 2869, sorting](https://www.acmicpc.net/problem/2869)
 
-     - 자바: ***디버깅 문제로 패스***
-
   - > [Baekjoon: 15829, sorting](https://www.acmicpc.net/problem/15829)
-
-     - 자바: ***디버깅 문제로 패스***
 
    - > [Baekjoon: 10773, sorting](https://www.acmicpc.net/problem/10773)
 
