@@ -129,6 +129,8 @@
 
    - > [Baekjoon: 11651, sorting](https://www.acmicpc.net/problem/11651)
 
+- 230125:
+
    - > [Baekjoon: 2805, **Binary Search**](https://www.acmicpc.net/problem/2805)
      - 자바: 수가 클때면 언제나 오버플로우 대비해야
      - 파이썬: 이분탐색할 때 쓸데없이 배열을 순환하는 일을 만들지 않을 필요가 있다. 
