@@ -126,3 +126,10 @@
   - > [Baekjoon: 15829, sorting](https://www.acmicpc.net/problem/15829)
 
    - > [Baekjoon: 10773, sorting](https://www.acmicpc.net/problem/10773)
+
+   - > [Baekjoon: 11651, sorting](https://www.acmicpc.net/problem/11651)
+     - 아직자바안품
+     
+   - > [Baekjoon: 2805, sorting](https://www.acmicpc.net/problem/2805)
+     - 아직자바안품
+     - 파이썬: 이분탐색할 때 쓸데없이 배열을 순환하는 일을 만들지 않을 필요가 있다. 
