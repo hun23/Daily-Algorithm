@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 import java.util.Arrays;
 
-public class aaa {
+public class n1929 {
 	public void run() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -23,7 +23,7 @@ public class aaa {
 			if (i * i > n) {
 				break;
 			}
-			for (int j = i + i; j < n + 1; j+=i) {
+			for (int j = i + i; j < n + 1; j += i) {
 				if (is_prime_arr[j]) {
 					is_prime_arr[j] = false;
 				}

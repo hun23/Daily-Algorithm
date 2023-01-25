@@ -3,8 +3,6 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class n1259 {
 	public void run() throws IOException {
@@ -17,7 +15,7 @@ public class n1259 {
 			}
 			int _len = inp.length;
 			boolean p = true;
-			for (int i = 0; i < _len/2; i++) {
+			for (int i = 0; i < _len / 2; i++) {
 				if (inp[i] != inp[_len - 1 - i]) {
 					p = false;
 					break;

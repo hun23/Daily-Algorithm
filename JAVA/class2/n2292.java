@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.util.Queue;
 import java.util.LinkedList;
 
-public class aaa {
+public class n2292 {
 	public void run() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
