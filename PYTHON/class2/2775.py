@@ -6,8 +6,7 @@ def how_many(apart, k, n):
     if apart[k][n] != 0:
         return apart[k][n]
     sum = 0
-    # 아래층(k - 1)에서 1호(=인덱스는 1-1=0)
-    # ~ n호(마찬가지로 인덱스는 n-1까지 순회
+    # 아래층(k - 1)에서 인덱스 0부터 인덱스 n까지 순회
     for i in range(n + 1):
         sum += how_many(apart, k - 1, i)
     # 얻은 값 저장
@@ -28,6 +27,8 @@ for _ in range(t):
     k = int(sys.stdin.readline().rstrip())
     n = int(sys.stdin.readline().rstrip())
     # 재귀함수 시작
-    answer.append(how_many(apart, k, n - 1))
-for a in answer:
+    answer.append(how_many(apart, k, n - 1))  # n - 1을 입력해서 1호를 인덱스0으로
+    # for a in answer:
+    # print(a)
+for a in apart:
     print(a)
