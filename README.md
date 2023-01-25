@@ -97,8 +97,8 @@
 
   - > [Baekjoon: 10816, sorting, **Binary Search**, hashmap](https://www.acmicpc.net/problem/10816)
   
-     - 파이썬 str.join()사용
-      ***아직 못풀었다.... 일단 패스***
+     - 파이썬 str.join()사용, 풀긴 했는데 느리다. 더 찾아봐야 할 것 같다.
+     - 자바: 아직...
 
   - > [Baekjoon: 11866, queue](https://www.acmicpc.net/problem/11866)
 
@@ -121,16 +121,16 @@
 
      - 메모리 제한이 심한 문제, 조건에 따른 해결방법 필요
 
-  - > [Baekjoon: 2869, sorting](https://www.acmicpc.net/problem/2869)
+  - > [Baekjoon: 2869](https://www.acmicpc.net/problem/2869)
 
-  - > [Baekjoon: 15829, sorting](https://www.acmicpc.net/problem/15829)
+  - > [Baekjoon: 15829, hashing](https://www.acmicpc.net/problem/15829)
 
-   - > [Baekjoon: 10773, sorting](https://www.acmicpc.net/problem/10773)
+   - > [Baekjoon: 10773, stack](https://www.acmicpc.net/problem/10773)
 
    - > [Baekjoon: 11651, sorting](https://www.acmicpc.net/problem/11651)
 
-   - > [Baekjoon: 2805, sorting](https://www.acmicpc.net/problem/2805)
+   - > [Baekjoon: 2805, **Binary Search**](https://www.acmicpc.net/problem/2805)
      - 자바: 수가 클때면 언제나 오버플로우 대비해야
      - 파이썬: 이분탐색할 때 쓸데없이 배열을 순환하는 일을 만들지 않을 필요가 있다. 
 
-   - > [Baekjoon: 7568, sorting](https://www.acmicpc.net/problem/7568)
+   - > [Baekjoon: 7568, **Bruteforce**](https://www.acmicpc.net/problem/7568)
