@@ -131,8 +131,30 @@
 
 - 230125:
 
-   - > [Baekjoon: 2805, **Binary Search**](https://www.acmicpc.net/problem/2805)
-     - 자바: 수가 클때면 언제나 오버플로우 대비해야
-     - 파이썬: 이분탐색할 때 쓸데없이 배열을 순환하는 일을 만들지 않을 필요가 있다. 
+  - > [Baekjoon: 2805, **Binary Search**](https://www.acmicpc.net/problem/2805)
+    - 자바: 수가 클때면 언제나 오버플로우 대비해야
+    - 파이썬: 이분탐색할 때 쓸데없이 배열을 순환하는 일을 만들지 않을 필요가 있다. 
 
-   - > [Baekjoon: 7568, **Bruteforce**](https://www.acmicpc.net/problem/7568)
+  - > [Baekjoon: 7568, **Bruteforce**](https://www.acmicpc.net/problem/7568)
+
+- 230126:
+
+  - > [Baekjoon: 18111, **Bruteforce**](https://www.acmicpc.net/problem/18111)
+    - 자바:X
+    - 파이썬:X -> 시간초과
+
+  - > [Baekjoon: 2839, **Dynamic Programming, Greedy**](https://www.acmicpc.net/problem/2839)
+    - 자바:X
+    - 파이썬:X
+
+  - > [Baekjoon: 4949, Stack](https://www.acmicpc.net/problem/4949)
+    - 자바:X
+    - 파이썬:X
+
+  - > [Baekjoon: 10845, Queue](https://www.acmicpc.net/problem/10845)
+    - 자바:X
+    - 파이썬:X
+
+  - > [Baekjoon: 10866, Deque](https://www.acmicpc.net/problem/10866)
+    - 자바:X
+    - 파이썬:X
