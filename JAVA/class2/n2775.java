@@ -3,7 +3,6 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.ArrayList;
 
 public class n2775 {
 	public void run() throws IOException {
@@ -27,7 +26,7 @@ public class n2775 {
 			int k = Integer.parseInt(br.readLine());
 			int n = Integer.parseInt(br.readLine());
 			// 계산
-			int answer = how_many(aprt, k, n - 1);
+			int answer = how_many(aprt, k, n - 1); // n-1을 입력해서 1호를 인덱스 0으로
 			bw.write(String.valueOf(answer) + "\n");
 		}
 		// 배열 확인
@@ -47,7 +46,7 @@ public class n2775 {
 		if (aprt[k][n] != 0) {
 			return aprt[k][n];
 		}
-		// k-1층 1호(=index0) ~ n호(=indexn-1)까지 순회하며 더하기
+		// k-1층 index 0 ~ index n까지 순회하며 더하기
 		for (int i = 0; i <= n; i++) {
 			ret += how_many(aprt, k - 1, i);
 		}
