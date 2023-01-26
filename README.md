@@ -153,7 +153,7 @@
 
   - > [Baekjoon: 10845, Queue](https://www.acmicpc.net/problem/10845)
     - 자바:X
-    - 파이썬:X
+    - 파이썬:O, class 만들기 연습
 
   - > [Baekjoon: 10866, Deque](https://www.acmicpc.net/problem/10866)
     - 자바:X
