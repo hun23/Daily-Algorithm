@@ -141,7 +141,7 @@
 
   - > [Baekjoon: 18111, **Bruteforce**](https://www.acmicpc.net/problem/18111)
     - 자바:X
-    - 파이썬:X -> 시간초과
+    - 파이썬:O, Bruteforce 문제여도 리스트 반복은 최대한 피하기 => dictionary등 다른 방법 찾기
 
   - > [Baekjoon: 2839, **Dynamic Programming, Greedy**](https://www.acmicpc.net/problem/2839)
     - 자바:X
@@ -158,3 +158,7 @@
   - > [Baekjoon: 10866, Deque](https://www.acmicpc.net/problem/10866)
     - 자바:X
     - 파이썬:O, class 만들기 연습
+
+  - > [Baekjoon: 1244, SW_IM](https://www.acmicpc.net/problem/1244)
+    - 자바:X
+    - 파이썬:O, 늘 인덱스 조심하기, 

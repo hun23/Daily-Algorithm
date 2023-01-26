@@ -10,7 +10,7 @@ f = open("./TESTCASE/18111.txt")
 n, m, b_inp = map(int, f.readline().rstrip().split())
 # arr 입력 및 정렬
 arr = [0 for _ in range(n * m)]
-height_count = dict()
+height_count = dict()  # 이번 문제 핵심
 for row in range(n):
     # inp = list(map(int, sys.stdin.readline().rstrip().split()))
     inp = list(map(int, f.readline().rstrip().split()))
