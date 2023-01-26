@@ -2,51 +2,48 @@ import sys
 from tqdm import tqdm
 import time as ttime
 
-# 시간초과 3 500 * 500에 10.372531414031982
+# 통과, 500 * 500 시간: 0.09084129333496094
 # 입력
-# n, m, b_inp = map(int, input().split())
 st = ttime.time()
 f = open("./TESTCASE/18111.txt")
+# n, m, b_inp = map(int, input().split())
 n, m, b_inp = map(int, f.readline().rstrip().split())
-arr = [0 for _ in range(m)]
-_min = 256
-_max = 0
-for i in range(n):
-    # arr[i] = list(map(int, sys.stdin.readline().rstrip().split()))
-    arr[i] = list(map(int, f.readline().rstrip().split()))
-    if _min > min(arr[i]):
-        _min = min(arr[i])
-    if _max < max(arr[i]):
-        _max = max(arr[i])
+# arr 입력 및 정렬
+arr = [0 for _ in range(n * m)]
+height_count = dict()
+for row in range(n):
+    # inp = list(map(int, sys.stdin.readline().rstrip().split()))
+    inp = list(map(int, f.readline().rstrip().split()))
+    for (i, num) in enumerate(inp):
+        if height_count.get(num) == None:
+            height_count[num] = 1
+        else:
+            height_count[num] += 1
+        arr[row * m + i] = num
 # 변수 세팅
+_min = min(arr)
+_max = max(arr)
 get_block_time = 2
 put_block_time = 1
-answer = (2147483647, -1)
-# 0 ~ 256까지 전부 고려하기
-for h in tqdm(range(_max, _min - 1, -1)):
-    # b : 현재블록, possible : 현재 h가 가능한지, time : 걸리는 시간
+need_time = 2147483647
+answer_height = -1
+for target_height in range(_min, _max + 1):
+    put_need = 0
+    get_need = 0
     b = b_inp
-    time = answer[0]
-    time_out = False
-    # arr 순회
-    for row in range(n):
-        for col in range(m):
-            # 목표 높이(h)와 현재 칸의 높이(arr[row][col]) 차이
-            diff = arr[row][col] - h
-            if diff > 0:
-                b += diff  # diff가 양수면 인벤토리에 블록 저장
-                time -= get_block_time * diff  # time에서 소모된 시간 빼기
-            else:
-                b += diff  # diff가 음수인 상태이므로 += 사용
-                time += put_block_time * diff  # 같은 이유로 += 사용
-            if time < 0:
-                time_out = True
-                break
-        if time_out:
-            break
-    # 인벤토리가 음수이면
-    if b < 0 or time_out:
+    for (height, count) in height_count.items():
+        diff = (target_height - height) * count
+        if diff >= 0:
+            put_need += diff
+        else:
+            get_need -= diff  # diff가 음수이므로 -= 사용
+            b -= diff
+    if put_need > b or b < 0:
         continue
-    answer = (answer[0] - time, h)
-print(f"{answer[0]} {answer[1]}")
+    time_sum = put_need * put_block_time + get_need * get_block_time
+    if need_time >= time_sum:  # 소모되는 시간이 같으면
+        need_time = time_sum
+        answer_height = target_height  # 더 높은 값으로 업데이트
+print(need_time, end=" ")
+print(answer_height)
 print(f"time: {ttime.time() - st}")

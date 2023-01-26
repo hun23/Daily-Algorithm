@@ -149,7 +149,7 @@
 
   - > [Baekjoon: 4949, Stack](https://www.acmicpc.net/problem/4949)
     - 자바:X
-    - 파이썬:X
+    - 파이썬:O, 더 나은 코드 찾아보기
 
   - > [Baekjoon: 10845, Queue](https://www.acmicpc.net/problem/10845)
     - 자바:X
