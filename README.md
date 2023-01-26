@@ -145,7 +145,7 @@
 
   - > [Baekjoon: 2839, **Dynamic Programming, Greedy**](https://www.acmicpc.net/problem/2839)
     - 자바:X
-    - 파이썬:X
+    - 파이썬:O -> 왜 DP, greedy일까..? dp/greedy식으로 하면 재귀횟수가 넘친다.
 
   - > [Baekjoon: 4949, Stack](https://www.acmicpc.net/problem/4949)
     - 자바:X
