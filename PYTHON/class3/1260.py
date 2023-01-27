@@ -50,6 +50,24 @@ for node in graph:
 dfs(new_graph, visited, answer, v)  # DFS 실행
 print(" ".join(answer))
 
+# 그래프 입력하는 남의코드
+# 인접행렬방법, 공간복잡도 O(n^2) 비효율
+# 공간적으로는 비어있든 말든 총(n + 1)**2 개의 공간을 할당하니 낭비
+# 보기 편하고, 따로 sort할 필요 없다는 장점
+# 나중에 반복문돌때 인덱스로 돌아야해서 귀찮을지도?
+graph = [[0] * (n + 1) for _ in range(n + 1)]
+visited = [0] * (n + 1)
+for _ in range(m):
+    a, b = map(int, sys.stdin.readline().rstrip().split())
+    graph[a][b] = graph[b][a] = 1
+
+# 그래프 입력하는 또하나의 코드
+# 인접리스트
+# 다른 언어는 연결리스트 사용, 파이썬이니까 딕셔너리 사용
+# 공간복잡도 O(n + m), n은 노드 개수, m은 에지(간선) 개수
+graph = {1: [1, 3, 4], 2: [4], 3: [4], 4: [1]}
+
+
 # BFS 위한 초기화
 visited = [False] * (n + 1)
 answer = []

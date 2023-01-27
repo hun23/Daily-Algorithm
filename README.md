@@ -172,6 +172,14 @@
 
   - > [Baekjoon: Solved Ac Class 3](https://solved.ac/class/3)
 
-  - > [Baekjoon: 1260, SW_IM](https://www.acmicpc.net/problem/1260)
+  - > [Baekjoon: 1260, **DFS, BFS**](https://www.acmicpc.net/problem/1260)
     - 자바:X
-    - 파이썬:X
+    - 파이썬:O, DFS/BFS 기초 구현 공부
+
+  - > [Baekjoon: 2178, **미로찾기, BFS**](https://www.acmicpc.net/problem/2178)
+    - 자바:X
+    - 파이썬:O, 미로찾기 기초, BFS적용
+
+  - > [SWA: 1249, **Dijkstra Algorithm**]
+    - 자바:X
+    - 파이썬:O, 다익스트라 알고리즘 연습
