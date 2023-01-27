@@ -162,3 +162,16 @@
   - > [Baekjoon: 1244, SW_IM](https://www.acmicpc.net/problem/1244)
     - 자바:X
     - 파이썬:O, 늘 인덱스 조심하기, 
+
+  - > [Baekjoon: 2309, SW_IM](https://www.acmicpc.net/problem/2309)
+    - 자바:X
+    - 파이썬:O, 반복문 도는 리스트에서 요소 제거할때 인덱스로 접근하면 꼬인다
+      - arr.remove()로 값을 통해 접근해서 지울 것. 
+
+- 230127:
+
+  - > [Baekjoon: Solved Ac Class 3](https://solved.ac/class/3)
+
+  - > [Baekjoon: 1260, SW_IM](https://www.acmicpc.net/problem/1260)
+    - 자바:X
+    - 파이썬:X
