@@ -9,21 +9,13 @@ def check(arr, m, h):
     return True if _sum >= m else False
 
 
-# n, m = map(int, input().split())
-# arr = list(map(int, sys.stdin.readline().rstrip().split()))
-f = open(
-    "C:\\Users\\SSAFY\\Desktop\\ssafy\\Daily-Algorithm\\TESTCASE\\2805.txt"
-)
-n, m = map(int, f.readline().split())
-arr = list(map(int, f.readline().rstrip().split()))
+n, m = map(int, input().split())
+arr = list(map(int, sys.stdin.readline().rstrip().split()))
 lo = 0
 hi = max(arr)
-j = 0
 # 이분탐색
 while lo + 1 < hi:
     mid = (lo + hi) // 2
-    print(f"{j}: {mid}")
-    j += 1
     mid_checked = check(arr, m, mid)  # mid값에서 나누기가 가능한지
     if mid_checked:  # 가능하다면 lo값을 올린다.
         lo = mid

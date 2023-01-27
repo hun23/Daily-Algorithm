@@ -3,14 +3,10 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Stack;
-import java.io.File;
-import java.io.FileReader;
 
 public class n2805 {
 	public void run() throws IOException {
-		File note = new File("C:\\Users\\SSAFY\\Desktop\\ssafy\\Daily-Algorithm\\TESTCASE\\2805.txt");
-		BufferedReader br = new BufferedReader(new FileReader(note));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		// // n, m 입력
 		String[] inp = br.readLine().split(" ");
@@ -31,11 +27,9 @@ public class n2805 {
 		int lo = 0;
 		int hi = mx;
 		int mid;
-		int j = -1;
 		// 이분탐색 시작
 		while (lo + 1 < hi) {
 			mid = (hi + lo) / 2;
-			bw.write(String.valueOf(++j) + ": " + String.valueOf(mid) + "\n");
 			if (check(arr, m, mid)) {
 				lo = mid;
 			} else {
