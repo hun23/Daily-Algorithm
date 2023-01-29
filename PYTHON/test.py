@@ -1,4 +1,4 @@
 arr = [1, 2, 3]
-while arr:
-    print(arr.peek())
-    print(arr.pop())
+print(arr[:2])
+print(arr[:3])
+print(arr[:4])
