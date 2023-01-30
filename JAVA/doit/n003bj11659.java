@@ -4,7 +4,7 @@ import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class aaa {
+public class n003bj11659 {
 	public void run() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -17,7 +17,7 @@ public class aaa {
 		for (int i = 0; i < n; i++) {
 			int num = Integer.parseInt(inp2[i]);
 			arr[i] = num;
-			if (i != 0) {
+			if (i != 0) {9
 				part_sum[i] = part_sum[i - 1] + num;
 			} else {
 				part_sum[i] = num;
