@@ -183,3 +183,9 @@
   - > [SWA: 1249, **Dijkstra Algorithm**]
     - 자바:X
     - 파이썬:O, 다익스트라 알고리즘 연습
+
+
+- 230130:
+  - > [Baekjoon: 1012, **DFS, BFS**](https://www.acmicpc.net/problem/1012)
+    - 자바:X
+    - 파이썬:O, DFS/BFS 기초 적용
