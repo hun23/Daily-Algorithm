@@ -34,19 +34,32 @@ for _ in range(t):
             if arr[row][col] == 1 and not visited[row][col]:
                 # dfs(arr, visited, (row, col)) => recursion error
                 # bfs
-                q = deque()
-                q.append((row, col))
-                while q:
-                    r, c = q.pop()
-                    for i in range(4):
-                        nr = r + dr[i]
-                        nc = c + dc[i]
-                        if n > nr >= 0 and m > nc >= 0:
-                            if (
-                                arr[nr][nc] == 1
-                                and not visited[nr][nc]
-                            ):
-                                visited[nr][nc] = True
-                                q.append((nr, nc))
+                # q = deque()
+                # q.append((row, col))
+                # while q:
+                #     r, c = q.popleft()
+                #     for i in range(4):
+                #         nr = r + dr[i]
+                #         nc = c + dc[i]
+                #         if n > nr >= 0 and m > nc >= 0:
+                #             if (
+                #                 arr[nr][nc] == 1
+                #                 and not visited[nr][nc]
+                #             ):
+                #                 visited[nr][nc] = True
+                #                 q.append((nr, nc))
+                # dfs(stack)
+                stack = []
+                stack.append((row, col))
+                while stack:
+                    r, c = stack.pop()
+                    if not visited[r][c]:
+                        visited[r][c] = True
+                        for i in range(4):
+                            nr = r + dr[i]
+                            nc = c + dc[i]
+                            if n > nr >= 0 and m > nc >= 0:
+                                if arr[nr][nc] == 1:
+                                    stack.append((nr, nc))
                 answer += 1
     print(answer)
