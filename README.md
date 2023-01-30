@@ -193,3 +193,7 @@
   - > [Baekjoon: 1463, **DP**](https://www.acmicpc.net/problem/1463)
     - 자바:X
     - 파이썬:O
+
+  - > [Baekjoon: 2606, **DFS, BFS**](https://www.acmicpc.net/problem/2606)
+    - 자바:X
+    - 파이썬:O
