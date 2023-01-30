@@ -1,4 +1,15 @@
-arr = [1, 2, 3]
-print(arr[:2])
-print(arr[:3])
-print(arr[:4])
+import typing
+
+li: list = [1, 2, 3]
+
+num: int = 3
+
+num = "aaaaaa"
+
+
+def isint(num: list):
+    return num
+
+
+print(li)
+print(isint(num))
