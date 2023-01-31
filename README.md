@@ -159,7 +159,7 @@
     - 자바:X
     - 파이썬:O, class 만들기 연습
 
-  - > [Baekjoon: 1244, SW_IM](https://www.acmicpc.net/problem/1244)
+  - > [SW_IM추천, Baekjoon: 1244](https://www.acmicpc.net/problem/1244)
     - 자바:X
     - 파이썬:O, 늘 인덱스 조심하기, 
 
@@ -184,7 +184,6 @@
     - 자바:X
     - 파이썬:O, 다익스트라 알고리즘 연습
 
-
 - 230130:
   - > [Baekjoon: 1012, **DFS, BFS**](https://www.acmicpc.net/problem/1012)
     - 자바:X
@@ -197,3 +196,20 @@
   - > [Baekjoon: 2606, **DFS, BFS**](https://www.acmicpc.net/problem/2606)
     - 자바:X
     - 파이썬:O
+
+- 230130:
+  - > [Baekjoon: 2579, **Dynamic Programming**](https://www.acmicpc.net/problem/2579)
+    - 자바:X
+    - 파이썬:O
+
+  - > [SW_IM추천, Baekjoon: 2116, **Bruteforce**](https://www.acmicpc.net/problem/2116)
+    - 자바:X
+    - 파이썬:O
+
+  - > [SW_IM추천, Baekjoon: 2304, **Bruteforce**](https://www.acmicpc.net/problem/2304)
+    - 자바:X
+    - 파이썬:O, 이상하게 푼 것 같다..?
+
+  - > [SW_IM추천, Baekjoon: 2477](https://www.acmicpc.net/problem/2477)
+    - 자바:X
+    - 파이썬:O, 이상하게 푼 것 같다..? but 더 나은 풀이 추가.

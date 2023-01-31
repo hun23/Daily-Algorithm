@@ -1,22 +1,18 @@
-stack = []
-visited = [False for _ in range(7 + 1)]
-graph = {
-    1: [2, 3, 4],
-    2: [5],
-    3: [5],
-    4: [],
-    5: [6, 7],
-    6: [],
-    7: [3],
-}
+def hanoi(n, A, C, B):
+    if n == 1:
+        print(f"{A} to {C}")
+    else:
+        hanoi(n - 1, "A", "B", "C")
+        print(f"{A} to {C}")
+        hanoi(n - 1, "B", "C", "A")
 
-answer = []
-stack.append(1)
-while stack:
-    node = stack.pop()
-    if not visited[node]:
-        answer.append(node)
-        visited[node] = True
-        for n in graph[node]:
-            stack.append(n)
-print(answer)
+
+# A번 기둥의 1번 원반을 B번 기둥에 옮긴다.
+# A번 기둥의 2번 원반을 B번 기둥에 옮긴다.
+# B번 기둥의 1번 원반을 B번 기둥에 옮긴다.
+# A번 기둥의 3번 원반을 C번 기둥에 옮긴다.
+# B번 기둥의 1번 원반을 B번 기둥에 옮긴다.
+# B번 기둥의 2번 원반을 C번 기둥에 옮긴다.
+# B번 기둥의 1번 원반을 C번 기둥에 옮긴다.
+# A기둥 - B기둥 - C기둥
+hanoi(3, "A", "C", "B")
