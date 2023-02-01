@@ -213,3 +213,12 @@
   - > [SW_IM추천, Baekjoon: 2477](https://www.acmicpc.net/problem/2477)
     - 자바:X
     - 파이썬:O, 이상하게 푼 것 같다..? but 더 나은 풀이 추가.
+
+- 230201:
+  - > [SW_IM추천, Baekjoon: 2605](https://www.acmicpc.net/problem/2605)
+    - 자바:X
+    - 파이썬:O
+
+  - > [SW_IM추천, Baekjoon: 13300](https://www.acmicpc.net/problem/13300)
+    - 자바:X
+    - 파이썬:O
