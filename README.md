@@ -222,3 +222,26 @@
   - > [SW_IM추천, Baekjoon: 13300](https://www.acmicpc.net/problem/13300)
     - 자바:X
     - 파이썬:O
+
+- 230202:
+  - > [SWA: 1210]
+    - 자바:X
+    - 파이썬:O
+    
+  - > [SWA: 1211]
+    - 자바:X
+    - 파이썬:O
+    
+  - > [SWA: 1974]
+    - 자바:X
+    - 파이썬:O
+
+  - > [Class3, Baekjoon: 11724](https://www.acmicpc.net/problem/11724)
+    - 자바:X
+    - 파이썬:O
+
+  - > [Class3, Baekjoon: 5430](https://www.acmicpc.net/problem/5430)
+    - 자바:X
+    - 파이썬:X, 시간초과
+    
+    
