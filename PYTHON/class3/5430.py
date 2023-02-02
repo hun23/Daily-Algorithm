@@ -16,10 +16,10 @@ for _ in range(T):
     if n == 0:
         arr = deque()
     else:
-        arr = deque([0] * n)
-        for i in range(n):
-            arr[i] = inp[1 + i * 2]
-
+        # arr = deque([0] * n)
+        # for i in range(n):
+        #     arr[i] = inp[1 + i * 2]
+        arr = deque(inp[1:-1].split(","))
     # new
     error = False
     is_reversed = False
