@@ -242,10 +242,18 @@
 
   - > [Class3, Baekjoon: 5430](https://www.acmicpc.net/problem/5430)
     - 자바:X
-    - 파이썬:X, 시간초과
+    - 파이썬:O, 구현할 때 문제 설명을 따라가기 보다 더 생각을 하고 푸는 것이 시간초과 해결에 도움이 된다.
     
     
 0202 스터디 정리
 print(*st_list, sep=" ")  # 공백 포함 출력
 *더 사용할 것
 방배정/카드놀이 확인
+
+- 230203:
+  - > [Class3, Baekjoon: 7569, ***BFS***](https://www.acmicpc.net/problem/7569)
+    - 자바:X
+    - 파이썬:O, 3차원 배열 BFS
+  - > [Class3, Baekjoon: 7576, ***BFS***](https://www.acmicpc.net/problem/7576)
+    - 자바:X
+    - 파이썬:O
