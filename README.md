@@ -249,6 +249,8 @@
 print(*st_list, sep=" ")  # 공백 포함 출력
 *더 사용할 것
 방배정/카드놀이 확인
+10163 JW 코드 확인
+
 
 - 230203:
   - > [Class3, Baekjoon: 7569, ***BFS***](https://www.acmicpc.net/problem/7569)
@@ -257,3 +259,22 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [Class3, Baekjoon: 7576, ***BFS***](https://www.acmicpc.net/problem/7576)
     - 자바:X
     - 파이썬:O
+  - > [Class3, Baekjoon: 1003, ***Dynamic Programming***](https://www.acmicpc.net/problem/1003)
+    - 자바:X
+    - 파이썬:X
+
+  - > [Class3, Baekjoon: 1074, ***???***](https://www.acmicpc.net/problem/1074)
+    - 자바:X
+    - 파이썬:X
+
+  - > [Class3, Baekjoon: 1107, ***Bruteforce***](https://www.acmicpc.net/problem/1107)
+    - 자바:X
+    - 파이썬:X
+
+  - > [SW_IM추천, Baekjoon: 2491](https://www.acmicpc.net/problem/2491)
+    - 자바:X
+    - 파이썬:O
+
+  - > [SW_IM추천, Baekjoon: 2527](https://www.acmicpc.net/problem/2527)
+    - 자바:X
+    - 파이썬:X

@@ -32,3 +32,17 @@ for x in range(limits[0], limits[2]):
         if v:  # 해당 칸의 값이 0이 아니면
             answer[v] += 1  # 색종이별 칸 개수 추가
 print("\n".join(map(str, answer.values())))
+
+# grid = [[0 for _ in range(1001)] for _ in range(1001)]
+# T = int(input())
+
+# for idx in range(1, T+1):
+#     x, y, w, h = map(int, input().split())
+#     for _y in range(y, y+h):
+#         grid[_y][x:x+w] = [idx]*w
+
+# for idx in range(1, T+1):
+#     result = 0
+#     for cnt in range(1001):
+#         result += grid[cnt].count(idx)
+#     print(result)
