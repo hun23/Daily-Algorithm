@@ -278,3 +278,11 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [SW_IM추천, Baekjoon: 2527](https://www.acmicpc.net/problem/2527)
     - 자바:X
     - 파이썬:X
+
+- 230206:
+  - > [Class3, Baekjoon: 9019, ***BFS***](https://www.acmicpc.net/problem/9019)
+    - 자바:X
+    - 파이썬:O, 백준에서 파이썬으로 들어가면 시간초과, pypy로 하면 통과
+    - 이런 경우가 종종 있다고 한다. 파이썬의 경우 bidirectional BFS를 하면 더 낫다고 한다.
+
+
