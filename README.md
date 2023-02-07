@@ -275,10 +275,6 @@ print(*st_list, sep=" ")  # 공백 포함 출력
     - 자바:X
     - 파이썬:O
 
-  - > [SW_IM추천, Baekjoon: 2527](https://www.acmicpc.net/problem/2527)
-    - 자바:X
-    - 파이썬:X
-
 - 230206:
   - > [Class3, Baekjoon: 9019, ***BFS***](https://www.acmicpc.net/problem/9019)
     - 자바:X
@@ -288,3 +284,8 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [Class3, Baekjoon: 10026, ***DFS, BFS***](https://www.acmicpc.net/problem/10026)
     - 자바:X
     - 파이썬:O, 
+
+- 230207:
+  - > [SW_IM추천, Baekjoon: 2527](https://www.acmicpc.net/problem/2527)
+    - 자바:X
+    - 파이썬:O
