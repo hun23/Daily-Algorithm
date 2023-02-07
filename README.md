@@ -301,3 +301,6 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [SW_IM추천, Baekjoon: 2564](https://www.acmicpc.net/problem/2564)
     - 자바:X
     - 파이썬:O, 삼항연산자 += 등 순서 주의할 것
+  - > [SW_IM추천, Baekjoon: 2578](https://www.acmicpc.net/problem/2578)
+    - 자바:X
+    - 파이썬:O
