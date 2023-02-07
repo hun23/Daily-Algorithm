@@ -286,6 +286,18 @@ print(*st_list, sep=" ")  # 공백 포함 출력
     - 파이썬:O, 
 
 - 230207:
+  - > [SW_IM추천, Baekjoon: 2491](https://www.acmicpc.net/problem/2491)
+    - 자바:X
+    - 파이썬:O
   - > [SW_IM추천, Baekjoon: 2527](https://www.acmicpc.net/problem/2527)
     - 자바:X
     - 파이썬:O
+  - > [SW_IM추천, Baekjoon: 2559](https://www.acmicpc.net/problem/2559)
+    - 자바:X
+    - 파이썬:O
+  - > [SW_IM추천, Baekjoon: 2563](https://www.acmicpc.net/problem/2563)
+    - 자바:X
+    - 파이썬:O
+  - > [SW_IM추천, Baekjoon: 2564](https://www.acmicpc.net/problem/2564)
+    - 자바:X
+    - 파이썬:O, 삼항연산자 += 등 순서 주의할 것
