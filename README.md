@@ -313,3 +313,6 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [Class3, Baekjoon: 9095, ***dp***](https://www.acmicpc.net/problem/9095)
     - 자바:X
     - 파이썬:O, BFS로 풀었는데, 문제 분류는 dp 더 알아봐야할듯
+  - > [Class3, Baekjoon: 1676](https://www.acmicpc.net/problem/1676)
+    - 자바:X
+    - 파이썬:O
