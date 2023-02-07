@@ -304,3 +304,12 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [SW_IM추천, Baekjoon: 2578](https://www.acmicpc.net/problem/2578)
     - 자바:X
     - 파이썬:O
+  - > [Class3, Baekjoon: 11403, ***Graph, DFS***](https://www.acmicpc.net/problem/11403)
+    - 자바:X
+    - 파이썬:O, 
+  - > [Class3, Baekjoon: 17219, ***Hash***](https://www.acmicpc.net/problem/17219)
+    - 자바:X
+    - 파이썬:O, 
+  - > [Class3, Baekjoon: 9095, ***dp***](https://www.acmicpc.net/problem/9095)
+    - 자바:X
+    - 파이썬:O, BFS로 풀었는데, 문제 분류는 dp 더 알아봐야할듯
