@@ -1,0 +1,93 @@
+# from collections import deque
+
+
+# def solution(q1, q2):
+#     q1 = deque(q1)
+#     q2 = deque(q2)
+#     q1_sum = sum(q1)
+#     q2_sum = sum(q2)
+#     divid_2 = (q1_sum + q2_sum) // 2
+#     l = len(q1)
+#     if q1_sum == q2_sum == divid_2:
+#         return 0
+
+#     # q1_minus = divid_2 - q1_sum
+#     # q2_minus = divid_2 - q2_sum
+#     # result = deque()
+#     # if q1_minus > 0 and q1_minus in q2: # 만약 차이가 반대쪽에 있으면 인덱스만큼의 길이
+#     #     result.append(q2.index(q1_minus))
+#     # elif q2_minus > 0 and q2_minus in q1:
+#     #     result.append(q1.index(q2_minus))
+#     cnt = 0
+#     while q1_sum != divid_2:
+#         if q1_sum > q2_sum:
+#             r = q1.popleft()
+#             q2.append(r)
+#             q1_sum -= r
+#             q2_sum += r
+#             cnt += 1
+#         elif q1_sum < q2_sum:
+#             r = q2.popleft()
+#             q1.append(r)
+#             q1_sum += r
+#             q2_sum -= r
+#             cnt += 1
+#         if cnt > (l * 10):
+#             return -1
+#     # result.append(cnt)
+#     # return min(result)
+#     return cnt
+from collections import deque
+
+
+def solution(queue1, queue2):
+    # list
+    big_q = list(queue1 + queue2)
+    len_ = len(big_q)
+    sum_ = sum(big_q) / 2
+    left = 0
+    right = len(queue1)
+    answer = 0
+    if max(big_q) > sum(big_q) / 2:
+        return -1
+    temp_sum = sum(big_q[left:right])
+    while left <= right and 0 <= left and right < len_:
+        if temp_sum > sum_:
+            temp_sum -= big_q[left]
+            left += 1
+            answer += 1
+        elif temp_sum < sum_:
+            temp_sum += big_q[right]
+            right += 1
+            answer += 1
+        else:
+            return answer
+
+    return -1
+
+    # # BFS
+    # big_q = list(queue1 + queue2)
+    # sum_ = sum(big_q) / 2
+    # len_ = len(big_q)
+    # if max(big_q) > sum(big_q) / 2:
+    #     return -1
+    # visited = dict()
+    # answer = -1
+    # bfs_q = deque()
+    # bfs_q.append((0, len(queue1), 0))
+    # visited[(0, len(queue1))] = True
+    # while bfs_q:
+    #     st1, st2, cnt = bfs_q.popleft()
+    #     if sum(big_q[st1:st2]) == sum_:
+    #         return cnt
+    #     # 1에서 pop 2에 insert
+    #     if len_ > st1 + 1 >= 0 and st1 != st2:
+    #         if visited.get((st1 + 1, st2)) is None:
+    #             visited[(st1 + 1, st2)] = True
+    #             bfs_q.append((st1 + 1, st2, cnt + 1))
+    #     # 2에서 pop 1에 insert
+    #     if len_ > st2 + 1 >= 0 and st2 != len_ - 1:
+    #         if visited.get((st1, st2 + 1)) is None:
+    #             visited[(st1, st2 + 1)] = True
+    #             bfs_q.append((st1, st2 + 1, cnt + 1))
+    # return answer

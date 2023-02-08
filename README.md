@@ -330,3 +330,8 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [Class3, Baekjoon: 1931, ***Greedy Algorithm**](https://www.acmicpc.net/problem/1931)
     - 자바:X
     - 파이썬:???
+
+  - > [Programmers, 두 큐 합 같게 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/118667)
+    - 자바:X
+    - 파이썬:O
+		

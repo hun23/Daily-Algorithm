@@ -1,41 +1,48 @@
-import sys
+from collections import deque
 
-sys.stdin = open("input.txt", "r")
-import copy
 
-for roop in range(10):
-    T = int(input())
-    array = []
-    for _ in range(100):
-        array.append(list(map(int, input().split())))
-    xlist = []
-    cntlist = []
-    for idx in range(100):
-        if array[0][idx] == 1:
-            xlist.append(idx)
-    rst = 2000000
-    while xlist != []:
-        y = 0
-        x = xlist.pop()
-        orix = x
-        cnt = 0
-        newray = copy.deepcopy(array)
-        while y != 100:
-            if x + 1 < 100 and newray[y][x + 1] == 1:
-                newray[y][x] = 0
-                x = x + 1
-                cnt += 1
-            elif x - 1 >= 0 and newray[y][x - 1] == 1:
-                newray[y][x] = 0
-                x = x - 1
-                cnt += 1
-            elif y + 1 < 100:
-                y = y + 1
-                cnt += 1
+def solution(maps):
+    answer = []
+    rlen = len(maps)
+    clen = len(maps[0])
+
+    maps = [list(mp) for mp in maps]
+    visited = [[False] * clen for _ in range(rlen)]
+
+    cnt = 0
+    for r in range(rlen):
+        for c in range(clen):
+            if maps[r][c] == "X":
+                visited[r][c] = True
             else:
-                break
-        if rst > cnt:
-            rst = cnt
-            rstidx = orix
-        # print(orix, cnt)
-    print(f"#{T} {rstidx}")
+                cnt += 1
+    if cnt == 0:
+        return [-1]
+
+    dr = [1, -1, 0, 0]
+    dc = [0, 0, 1, -1]
+    for r in range(rlen):
+        for c in range(clen):
+            if not visited[r][c]:
+                # BFS
+                sum_ = 0
+                q = deque()
+                q.append((r, c))
+                visited[r][c] = True
+                while q:
+                    r, c = q.popleft()
+                    sum_ += int(maps[r][c])
+                    for i in range(4):
+                        nr, nc = r + dr[i], c + dc[i]
+                        if rlen > nr >= 0 and clen > nc >= 0:
+                            if not visited[nr][nc]:
+                                visited[nr][nc] = True
+                                q.append((nr, nc))
+                if sum_ != 0:
+                    answer.append(sum_)
+    return sorted(answer)
+
+
+s = solution(["X591X", "X1X5X", "X231X", "1XXX1"])
+print(s)
+# 코드 비교 필요
