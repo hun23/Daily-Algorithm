@@ -316,3 +316,17 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [Class3, Baekjoon: 1676](https://www.acmicpc.net/problem/1676)
     - 자바:X
     - 파이썬:O
+
+- 230208:
+  - > [Class3, Baekjoon: 11726, ***Dynamic Programming**](https://www.acmicpc.net/problem/11726)
+    - 자바:X
+    - 파이썬:O, dp연습
+  - > [Class3, Baekjoon: 11727, ***Dynamic Programming**](https://www.acmicpc.net/problem/11727)
+    - 자바:X
+    - 파이썬:O, dp연습
+  - > [Class3, Baekjoon: 1697, ***BFS**](https://www.acmicpc.net/problem/1697)
+    - 자바:X
+    - 파이썬:O
+  - > [Class3, Baekjoon: 1931, ***Greedy Algorithm**](https://www.acmicpc.net/problem/1931)
+    - 자바:X
+    - 파이썬:???
