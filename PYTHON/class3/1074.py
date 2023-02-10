@@ -1,44 +1,17 @@
-N, r, c =map(int, input().split())
-# r행 c열
-# n = 2일때 아래 칸으로 가면 2^n+1이 들어간다
-# n = 3일때 2^n+1이 들어간다
-# 3, 0 -> 2^n+1, 홀수면 +1
-# 4, 0
+N, r, c = map(int, input().split())
+distance = 0
+div = 2
+while not (r == 0 and c == 0):
+    if r % div != 0:
+        distance += div * (r % div)
+        r = r - r % div
+    if c % div != 0:
+        distance += (div // 2) ** 2
+        c = c - c % div
+    div *= 2
 
-# ar = 0
-# ac = 0
-# (3, 1)
-# ar = (r // 2) * 2**(N + 1)
-# ar +=
-# # r % 2 == 1 & c % 2 == 0
-# ar += 2
-# # r % 2 == 0 & c % 2 == 1
-# ar += 1
-# # r % 2 == 1 & c % 2 == 1
-# ar += 3
-
-# c // 2 * 4
-# answer = 0
-# answer += (r // 2) * (2**(N + 1))
-# answer += (c // 2) * 4
-# if r % 2 == 1:
-#     if c % 2 == 0:
-#         answer += 2
-#     else:
-#         answer += 3
-# else:
-#     if c % 2 == 1:
-#         answer += 1
-# print(answer)
-if r == 0 and c == 0:
-    print(0)
-    exit()
-
-max_len = max(r, c)
-binary = []
-while max_len > 0:
-    binary.append(str(max_len % 2))
-    max_len //= 2
-binary.reverse()
-b = "".join(binary)
-print(b)
+print(distance)
+# 가장 가까운 r, c 가 2의 배수인 점으로 이동 및 거리계산
+# 가장 가까운 r, c가 4의 배수인 점으로 이동 및 이전 이동점으로부터 거리계산
+# r의 경우 div로 나눈 나머지 * div, c의 경우 div를 2로 나눈 값의 제곱
+# 0,0에 도달한 경우 break

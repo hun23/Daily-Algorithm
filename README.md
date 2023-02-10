@@ -361,3 +361,15 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [Class3, Baekjoon: 18870](https://www.acmicpc.net/problem/18870)
     - 자바:X
     - 파이썬:O
+
+  - > [Class3, Baekjoon: 1074](https://www.acmicpc.net/problem/1074)
+    - 자바:X
+    - 파이썬:O, 
+
+  - > [Class3, Baekjoon: 11444](https://www.acmicpc.net/problem/11444)
+    - 자바:X
+    - 파이썬:XXXXXXX
+
+  - > [Class3, Baekjoon: 1504](https://www.acmicpc.net/problem/1504)
+    - 자바:X
+    - 파이썬:XXXXXXX
