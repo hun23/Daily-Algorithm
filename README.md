@@ -334,4 +334,30 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [Programmers, 두 큐 합 같게 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/118667)
     - 자바:X
     - 파이썬:O
-		
+
+
+- 230209:
+코딩이란 기본적으로 1)구현 2)디버깅 3)최적화의 과정을 거치게 됩니다.
+1번, 2번이 안되면 4~5시간 소모해야 하구요
+3번이 안되면 30분 제한을 두고 문제를 풀어보세요.
+
+- 230210:
+  - > [Class3, Baekjoon: 1620](https://www.acmicpc.net/problem/1620)
+    - 자바:X
+    - 파이썬:O
+
+  - > [Class3, Baekjoon: 2630, ***Recursion**](https://www.acmicpc.net/problem/2630)
+    - 자바:X
+    - 파이썬:O
+
+  - > [Class3, Baekjoon: 11723, ***BitMask**](https://www.acmicpc.net/problem/11723)
+    - 자바:X
+    - 파이썬:O
+
+  - > [Class3, Baekjoon: 11399](https://www.acmicpc.net/problem/11399)
+    - 자바:X
+    - 파이썬:O
+
+  - > [Class3, Baekjoon: 18870](https://www.acmicpc.net/problem/18870)
+    - 자바:X
+    - 파이썬:O
