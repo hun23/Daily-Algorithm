@@ -373,3 +373,8 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [Class3, Baekjoon: 1504](https://www.acmicpc.net/problem/1504)
     - 자바:X
     - 파이썬:XXXXXXX
+
+- 230213:
+  - > [SWEA 1216]
+    - 자바:X
+    - 파이썬:O
