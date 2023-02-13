@@ -1,48 +1,43 @@
-from collections import deque
+def solution(n, m, x, y, r, c, k):
+    answer = ""
+
+    # 변수 초기화
+    arr = [[""] * m for _ in range(n)]
+    start = (x - 1, y - 1)
+    end = (r - 1, c - 1)
+
+    # d - l - r - u
+    # dr = [1, 0, 0, -1]
+    # dc = [0, -1, 1, 0]
+
+    # u - r - l - d
+    dr = [-1, 0, 0, 1]
+    dc = [0, 1, -1, 0]
+
+    # DFS
+    stack = []
+    stack.append(start)
+    while stack:
+        r, c = stack.pop()
+        cur_k = len(arr[r][c])
+        if (r, c) == end and cur_k == k:
+            answer = arr[r][c]
+            break
+        if cur_k + 1 > k:
+            continue
+        for d in range(4):
+            nr, nc = r + dr[d], c + dc[d]
+            if n > nr >= 0 and m > nc >= 0:
+                arr[nr][nc] = arr[r][c] + "urld"[d]
+                stack.append((nr, nc))
+    if answer == "":
+        return "impossible"
+    return answer
 
 
-def solution(maps):
-    answer = []
-    rlen = len(maps)
-    clen = len(maps[0])
-
-    maps = [list(mp) for mp in maps]
-    visited = [[False] * clen for _ in range(rlen)]
-
-    cnt = 0
-    for r in range(rlen):
-        for c in range(clen):
-            if maps[r][c] == "X":
-                visited[r][c] = True
-            else:
-                cnt += 1
-    if cnt == 0:
-        return [-1]
-
-    dr = [1, -1, 0, 0]
-    dc = [0, 0, 1, -1]
-    for r in range(rlen):
-        for c in range(clen):
-            if not visited[r][c]:
-                # BFS
-                sum_ = 0
-                q = deque()
-                q.append((r, c))
-                visited[r][c] = True
-                while q:
-                    r, c = q.popleft()
-                    sum_ += int(maps[r][c])
-                    for i in range(4):
-                        nr, nc = r + dr[i], c + dc[i]
-                        if rlen > nr >= 0 and clen > nc >= 0:
-                            if not visited[nr][nc]:
-                                visited[nr][nc] = True
-                                q.append((nr, nc))
-                if sum_ != 0:
-                    answer.append(sum_)
-    return sorted(answer)
-
-
-s = solution(["X591X", "X1X5X", "X231X", "1XXX1"])
-print(s)
-# 코드 비교 필요
+i = [3, 4, 2, 3, 3, 1, 5]
+ii = [2, 2, 1, 1, 2, 2, 2]
+iii = [3, 3, 1, 2, 3, 3, 4]
+print(solution(*i))
+print(solution(*ii))
+print(solution(*iii))
