@@ -2,6 +2,13 @@ w, h = map(int, input().split())
 p, q = map(int, input().split())
 t = int(input())
 
-pp = p + t % (w * 2)
-qq = q + t % (h * 2)
-print(min(pp, w * 2 - pp), min(qq, h * 2 - qq))
+new_p = (p + t) % (2 * w)
+new_q = (q + t) % (2 * h)
+
+if new_p > w:
+    new_p = 2 * w - new_p
+
+if new_q > h:
+    new_q = 2 * h - new_q
+
+print(new_p, new_q)

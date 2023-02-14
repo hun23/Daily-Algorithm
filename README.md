@@ -383,3 +383,7 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [SWEA 1258, 1267, 1959, 1970]
     - 자바:X
     - 파이썬:O
+
+  - > [SW_IM추천, Baekjoon: 10158](https://www.acmicpc.net/problem/10158)
+    - 자바:X
+    - 파이썬:O
