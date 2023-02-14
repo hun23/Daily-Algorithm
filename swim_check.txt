@@ -34,20 +34,20 @@ x O회문2	1216
 x OMagnetic	1220	
 x OGNS	1221	
 x O행렬찾기	1258	
-x X작업순서	1267	
-x X두 개의 숫자열	1959	
-x X숫자 배열 회전	1961	
-x X쉬운 거스름돈	1970	
+x O작업순서	1267	
+x O두 개의 숫자열	1959	ccc
+x O숫자 배열 회전	1961	
+x O쉬운 거스름돈	1970	
 x O스도쿠검증	1974	
-x X어디에 단어가 들어갈 수 있을까	1979	
-x X파리 퇴치	2001	
-x X농작물 수확하기	2805	
+x O어디에 단어가 들어갈 수 있을까	1979	
+x O파리 퇴치	2001	
+x O농작물 수확하기	2805	
 x O최대 성적표 만들기	4466	
 x Omin max (learn-course-programming intermidate-파이썬 1일차)	4828	
 x O숫자 카드 (learn-course-programming intermidate-파이썬 1일차)	4834	
-x X구간합 (learn-course-programming intermidate-파이썬 1일차)	4835	
-x X색칠하기 (learn-course-programming intermidate-파이썬 2일차)	4836	
-x X특별한 정렬 (learn-course-programming intermidate-파이썬 2일차)	4843	
+x O구간합 (learn-course-programming intermidate-파이썬 1일차)	4835	
+x O색칠하기 (learn-course-programming intermidate-파이썬 2일차)	4836	
+x O특별한 정렬 (learn-course-programming intermidate-파이썬 2일차)	4843	
 x O민석이의 과제 체크하기	5431	
 x O정곤이의 단조 증가하는 수	6190	
 		
