@@ -26,14 +26,14 @@ x o X방 배정	13300	브론즈2
 x o X딱지놀이	14696	브론즈1
 x OView	1206	
 x OFlatten	1208	
-x XSum	1209	
+x OSum	1209	
 x OLadder1	1210	
 x OLadder2	1211	
-x X회문1	1215	
-x X회문2	1216	
+x O회문1	1215	
+x O회문2	1216	
 x OMagnetic	1220	
-x XGNS	1221	
-x X행렬찾기	1258	
+x OGNS	1221	
+x O행렬찾기	1258	
 x X작업순서	1267	
 x X두 개의 숫자열	1959	
 x X숫자 배열 회전	1961	
