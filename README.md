@@ -387,3 +387,9 @@ print(*st_list, sep=" ")  # 공백 포함 출력
   - > [SW_IM추천, Baekjoon: 10158](https://www.acmicpc.net/problem/10158)
     - 자바:X
     - 파이썬:O
+
+- 230217:
+  - > [SW_A추천, Baekjoon: 1799, ***Backtracking***](https://www.acmicpc.net/problem/1799)
+    - 자바:X
+    - 파이썬:O
+
