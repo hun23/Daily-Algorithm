@@ -93,8 +93,11 @@ def s1(inp):
 
     # print(q)
     answer = 0
+    mxlen = 0
     while q:
         cur, cnt = q.popleft()
+        if len(q) > mxlen:
+            mxlen = len(q)
         # print(f"cur:{cur} / {cnt}")
         if cur in end:
             answer = len(cnt)
@@ -106,7 +109,7 @@ def s1(inp):
                 temp.append(nex)
                 q.append((nex, temp))
     # print(answer)
-    return answer
+    return answer, mxlen
 
 
 def s2(inp):
@@ -164,12 +167,137 @@ def s2(inp):
     return 0
 
 
-T = 100
+def s3(inp):
+    global N
+    global M
+    global K
+    graph = {key: set() for key in range(1, K + 1)}
+    garo, sero = dict(), dict()
+    for k in range(K):  # Bus lines to garo / sero
+        b, x1, y1, x2, y2 = map(int, inp[k].split())
+        if x1 == x2:  # sero
+            y1, y2 = min(y1, y2), max(y1, y2)
+            sero.setdefault(x1, []).append((b, y1, y2))
+        elif y1 == y2:  # garo
+            x1, x2 = min(x1, x2), max(x1, x2)
+            garo.setdefault(y1, []).append((b, x1, x2))
+    sx, sy, ex, ey = map(
+        int, inp[-1].split()
+    )  # get start & end point
+
+    # garo/sero to graph
+    garo_keys, sero_keys = list(garo.keys()), list(sero.keys())
+    for n, garo_lines in garo.items():
+        # garo compare to sero
+        for garo_line in garo_lines:
+            st, ed = garo_line[1], garo_line[2]
+            for sero_key in sero_keys:
+                if st <= sero_key <= ed:
+                    sero_lines = sero[sero_key]
+                    for sero_line in sero_lines:
+                        if sero_line[1] <= n <= sero_line[2]:
+                            graph[garo_line[0]].add(sero_line[0])
+                            graph[sero_line[0]].add(garo_line[0])
+        # garo compare to garo
+        for i in range(len(garo_lines) - 1):
+            for j in range(i + 1, len(garo_lines)):
+                if garo_lines[i][2] < garo_lines[j][1]:
+                    continue
+                elif garo_lines[i][1] > garo_lines[j][2]:
+                    continue
+                elif (
+                    garo_lines[i][1] <= garo_lines[j][1]
+                    and garo_lines[j][2] <= garo_lines[i][2]
+                ):
+                    continue
+                graph[garo_lines[i][0]].add(garo_lines[j][0])
+                graph[garo_lines[j][0]].add(garo_lines[i][0])
+    for m, sero_lines in sero.items():
+        # garo compare to garo
+        for i in range(len(sero_lines) - 1):
+            for j in range(i + 1, len(sero_lines)):
+                if sero_lines[i][2] < sero_lines[j][1]:
+                    continue
+                elif sero_lines[i][1] > sero_lines[j][2]:
+                    continue
+                elif (
+                    sero_lines[i][1] <= sero_lines[j][1]
+                    and sero_lines[j][2] <= sero_lines[i][2]
+                ):
+                    continue
+                graph[sero_lines[i][0]].add(sero_lines[j][0])
+                graph[sero_lines[j][0]].add(sero_lines[i][0])
+
+    # BFS
+    visited = [0] * (K + 1)
+    q = deque()
+    # start point - graph / end point - graph
+    start, end = [], []
+    try:
+        for bnum, st, ed in garo[sy]:
+            if st <= sx <= ed:
+                start.append(bnum)
+    except:
+        pass
+    try:
+        for bnum, st, ed in sero[sx]:
+            if st <= sy <= ed:
+                start.append(bnum)
+    except:
+        pass
+    try:
+        for bnum, st, ed in garo[ey]:
+            if st <= ex <= ed:
+                end.append(bnum)
+    except:
+        pass
+    try:
+        for bnum, st, ed in sero[ex]:
+            if st <= ey <= ed:
+                end.append(bnum)
+    except:
+        pass
+    del garo
+    del sero
+    for st in start:
+        q.append(st)
+        visited[st] = 1
+    for ed in end:
+        q.append(ed)
+        visited[ed] = -1
+
+    answer = 0
+    mxlen = 0
+    while q:
+        cur = q.popleft()
+        if len(q) > mxlen:
+            mxlen = len(q)
+        found = False
+        # if cur in end:
+        #     answer = abs(visited[cur])
+        #     break
+        for nex in graph[cur]:
+            if visited[nex] * visited[cur] < 0:  # 만나면
+                found = True
+                answer = abs(visited[nex]) + abs(visited[cur])
+                break
+            if not visited[nex]:
+                visited[nex] = visited[cur] + (
+                    1 if visited[cur] > 0 else -1
+                )
+                q.append(nex)
+        if found:
+            break
+    return answer, mxlen
+
+
+T = 1000
 t1, t2 = 0, 0
+diff = 0
 for tc in tqdm(range(1, T + 1)):
     # N, M = random.randint(1, 100000), random.randint(1, 100000)
     # K = random.randint(1, 5000)
-    N, M = random.randint(2, 1000), random.randint(2, 1000)
+    N, M = random.randint(2, 10000), random.randint(2, 10000)
     K = random.randint(1, 500)
     inp = []
     # M, N, K = 6, 2, 4
@@ -197,12 +325,13 @@ for tc in tqdm(range(1, T + 1)):
     ey = random.randint(1, N)
     inp.append(f"{sx} {sy} {ex} {ey}")
     st = time.time()
-    a1 = s1(inp)
+    a1, l1 = s1(inp)
     mid = time.time()
-    a2 = s2(inp)
+    a2, l2 = s3(inp)
     ed = time.time()
     t1 += mid - st
     t2 += ed - mid
+    diff = max(diff, l1 - l2)
     # print(a1, a2)
     if a1 != a2:
         print("-------------------------------")
@@ -216,5 +345,7 @@ for tc in tqdm(range(1, T + 1)):
             print(ip, sep=",")
         print()
         break
+
 print(f"t1: {t1}")
 print(f"t2: {t2}")
+print(diff)
