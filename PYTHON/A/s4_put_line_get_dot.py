@@ -51,7 +51,7 @@ for m, sero_lines in sero.items():
                 graph[sero_lines[j][0]].add(sero_lines[i][0])
 
 # BFS
-visited = [False] * (K + 1)
+visited = [0] * (K + 1)
 q = deque()
 # start point - graph / end point - graph
 start, end = [], []
@@ -82,18 +82,29 @@ except:
 del garo
 del sero
 for st in start:
-    q.append((st, [st]))
-    visited[st] = True
+    q.append(st)
+    visited[st] = 1
+for ed in end:
+    q.append(ed)
+    visited[ed] = -1
+
 answer = 0
 while q:
-    cur, cnt = q.popleft()
-    if cur in end:
-        answer = len(cnt)
-        break
+    cur = q.popleft()
+    found = False
+    # if cur in end:
+    #     answer = abs(visited[cur])
+    #     break
     for nex in graph[cur]:
+        if visited[nex] * visited[cur] < 0:  # 만나면
+            found = True
+            answer = abs(visited[nex]) + abs(visited[cur])
+            break
         if not visited[nex]:
-            visited[nex] = True
-            temp = cnt[:]
-            temp.append(nex)
-            q.append((nex, temp))
+            visited[nex] = visited[cur] + (
+                1 if visited[cur] > 0 else -1
+            )
+            q.append(nex)
+    if found:
+        break
 print(answer)
