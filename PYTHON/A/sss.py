@@ -1,11 +1,14 @@
 from collections import deque
+import sys
 
-M, N = map(int, input().split())
-K = int(input())
+M, N = map(int, sys.stdin.readline().rstrip().split())
+K = int(sys.stdin.readline().rstrip())
 graph = {key: set() for key in range(1, K + 1)}
 garo, sero = dict(), dict()
 for k in range(K):  # Bus lines to garo / sero
-    b, x1, y1, x2, y2 = map(int, input().split())
+    b, x1, y1, x2, y2 = map(
+        int, sys.stdin.readline().rstrip().split()
+    )
     if x1 == x2:  # sero
         y1, y2 = min(y1, y2), max(y1, y2)
         sero.setdefault(x1, []).append((b, y1, y2))
@@ -14,8 +17,6 @@ for k in range(K):  # Bus lines to garo / sero
         garo.setdefault(y1, []).append((b, x1, x2))
 sx, sy, ex, ey = map(int, input().split())  # get start & end point
 
-print(f"garo: {garo}")
-print(f"sero: {sero}")
 # garo/sero to graph
 garo_keys, sero_keys = list(garo.keys()), list(sero.keys())
 for n, garo_lines in garo.items():
@@ -48,7 +49,6 @@ for m, sero_lines in sero.items():
             ):
                 graph[sero_lines[i][0]].add(sero_lines[j][0])
                 graph[sero_lines[j][0]].add(sero_lines[i][0])
-print(graph)
 
 # BFS
 visited = [False] * (K + 1)
@@ -79,30 +79,14 @@ try:
             end.append(bnum)
 except:
     pass
-# try:
-#     start_garos = list(map(lambda x: x[0], garo[sy]))
-# except:
-#     start_garos = []
-# try:
-#     start_seros = list(map(lambda x: x[0], sero[sx]))
-# except:
-#     start_seros = []
-# try:
-#     end_garos = list(map(lambda x: x[0], garo[ey]))
-# except:
-#     end_garos = []
-# try:
-#     end_seros = list(map(lambda x: x[0], sero[ex]))
-# except:
-#     end_seros = []
+del garo
+del sero
 for st in start:
     q.append((st, [st]))
     visited[st] = True
-print(q)
 answer = 0
 while q:
     cur, cnt = q.popleft()
-    print(f"cur:{cur} / {cnt}")
     if cur in end:
         answer = len(cnt)
         break
