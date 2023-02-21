@@ -34,7 +34,7 @@ X X BOJ	버스 갈아타기	2536	추천 문제 G1/BFS
 X O BOJ	치즈	2636	추천 문제 G4/BFS
 X O BOJ	탈출	3055	추천 문제 G4/BFS
 X RR BOJ	토마토	7569	추천 문제 G5/BFS
-X X BOJ	연산자 끼워넣기	14888	추천 문제 S1/Bruteforce, Backtracking
+X O BOJ	연산자 끼워넣기	14888	추천 문제 S1/Bruteforce, Backtracking
 X X BOJ	스타트와 링크	14889	추천 문제 S2/Bruteforce, Backtracking
 X X BOJ	인구 이동	16234	추천 문제
 X X BOJ	아기상어	16236	추천 문제

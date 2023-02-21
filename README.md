@@ -411,4 +411,8 @@ print(*st_list, sep=" ")  # 공백 포함 출력
     - 자바:X
     - 파이썬:O
 
+  - > [SW_A추천, Baekjoon: 14889, ***Bruteforce***](https://www.acmicpc.net/problem/14889)
+    - 자바:X
+    - 파이썬:X
+
 
