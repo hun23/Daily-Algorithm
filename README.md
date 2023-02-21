@@ -403,5 +403,12 @@ print(*st_list, sep=" ")  # 공백 포함 출력
     - 자바:X
     - 파이썬:O
 
-		
+  - > [SW_A추천, Baekjoon: 3055, ***BFS***](https://www.acmicpc.net/problem/3055)
+    - 자바:X
+    - 파이썬:O
+
+  - > [SW_A추천, Baekjoon: 14888, ***Bruteforce***](https://www.acmicpc.net/problem/14888)
+    - 자바:X
+    - 파이썬:O
+
 
