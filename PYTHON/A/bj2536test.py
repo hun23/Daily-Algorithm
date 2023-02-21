@@ -297,8 +297,8 @@ diff = 0
 for tc in tqdm(range(1, T + 1)):
     # N, M = random.randint(1, 100000), random.randint(1, 100000)
     # K = random.randint(1, 5000)
-    N, M = random.randint(2, 10000), random.randint(2, 10000)
-    K = random.randint(1, 500)
+    N, M = random.randint(2, 100000), random.randint(2, 100000)
+    K = random.randint(1, 5000)
     inp = []
     # M, N, K = 6, 2, 4
     # inp = [

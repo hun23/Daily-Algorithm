@@ -393,3 +393,15 @@ print(*st_list, sep=" ")  # 공백 포함 출력
     - 자바:X
     - 파이썬:O
 
+- 2302220:
+  - > [SW_A추천, Baekjoon: 2536, ***BFS, Graph***](https://www.acmicpc.net/problem/2536)
+    - 자바:X
+    - 파이썬:XXXXXXXXXXXX
+
+- 2302221:
+  - > [SW_A추천, Baekjoon: 2636, ***BFS***](https://www.acmicpc.net/problem/2636)
+    - 자바:X
+    - 파이썬:O
+
+		
+
