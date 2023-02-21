@@ -11,6 +11,10 @@ def get_code(xlen, axlen, bxlen):
         return 0
 
 
+for i in range(4):
+    inp = list(map(int, input().split()))
+    ax1, ay1, ax2, ay2 = inp[:4]
+
 for _ in range(4):
     inp = list(map(int, input().split()))
     ax1, ay1, ax2, ay2 = inp[:4]
