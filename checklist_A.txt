@@ -37,7 +37,7 @@ X RR BOJ	토마토	7569	추천 문제 G5/BFS
 X O BOJ	연산자 끼워넣기	14888	추천 문제 S1/Bruteforce, Backtracking
 X X BOJ	스타트와 링크	14889	추천 문제 S2/Bruteforce, Backtracking
 X X BOJ	인구 이동	16234	추천 문제
-X X BOJ	아기상어	16236	추천 문제
+X O BOJ	아기상어	16236	추천 문제
 X X BOJ	색종이 붙이기	17136	추천 문제
 X X BOJ	연구소 2	17141	추천 문제
 X X BOJ	연구소 3	17142	추천 문제

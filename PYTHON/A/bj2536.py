@@ -1,4 +1,11 @@
 from collections import deque
+import psutil
+
+def memory_usage(message: str = 'debug'):
+    p = psutil.Process()
+    rss = p.memory_info().rss / 2 ** 20
+    print(f"{message} memory usage: {rss: 10.5f} MB")
+
 
 M, N = map(int, input().split())
 K = int(input())
@@ -49,6 +56,7 @@ for m, sero_lines in sero.items():
                 graph[sero_lines[i][0]].add(sero_lines[j][0])
                 graph[sero_lines[j][0]].add(sero_lines[i][0])
 print(graph)
+memory_usage()
 
 # BFS
 visited = [False] * (K + 1)
