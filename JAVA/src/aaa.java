@@ -33,6 +33,7 @@ public class aaa {
 				adjL[i][num - 1] = 1;
 			}
 		}
+
 		// get subset
 		for (i = 0; i < (1 << N); i++) {
 			int[] groups = new int[N];
@@ -48,10 +49,11 @@ public class aaa {
 			}
 
 		}
+		// print answer
 		if (answer != Integer.MAX_VALUE) {
 			bw.write(String.valueOf(answer));
 		} else {
-			bw.write(-1);
+			bw.write(String.valueOf(-1));
 		}
 		bw.flush();
 		bw.close();
@@ -60,6 +62,7 @@ public class aaa {
 	static int bfs(int[][] adjL, int[] populations, int[] groups) {
 		int i;
 		int j;
+		int k;
 		int sum = 0;
 		boolean[] visited = new boolean[groups.length];
 		for (i = 0; i < 2; i++) {
@@ -67,6 +70,7 @@ public class aaa {
 			for (j = 0; j < groups.length; j++) {
 				if (groups[j] == i) {
 					queue.add(j);
+					break;
 				}
 			}
 			while (!queue.isEmpty()) {
@@ -81,10 +85,10 @@ public class aaa {
 					}
 				}
 			}
-		}
-		for (i = 0; i < groups.length; i++) {
-			if (!visited[i]) {
-				return -1;
+			for (k = 0; k < groups.length; k++) {
+				if (groups[k] == i && !visited[k]) {
+					return -1;
+				}
 			}
 		}
 		return (sum > 0) ? sum : -1 * sum;
