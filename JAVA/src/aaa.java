@@ -78,10 +78,11 @@ public class aaa {
 				sum += (i == 0) ? populations[cur] : (-1 * populations[cur]);
 				visited[cur] = true;
 				for (j = 0; j < adjL[cur].length; j++) {
-					int next = adjL[cur][j];
-					if (!visited[next] && groups[next] == i) {
-						visited[next] = true;
-						queue.add(next);
+					if (adjL[cur][j] == 1) {  // if next node exists
+						if (groups[j] == i && !visited[j]) {  // in same group & not visited
+							visited[j] = true;
+							queue.add(j);
+						}
 					}
 				}
 			}
