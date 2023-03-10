@@ -12,7 +12,7 @@ public class aaa {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int N = Integer.parseInt(br.readLine());
-		String[] inp = br.readLine().split(" ");
+		String[] inp = br.readLine().split(" ");`
 		int answer = Integer.MAX_VALUE;
 
 		// get populations
