@@ -28,6 +28,16 @@ int solve(int(*arr)[20], int H, int W, int idx)
 	int r = idx / W, c = idx % W;
 	if (idx == H * W)
 	{
+		for (int r = 0; r < H; r++)
+		{
+			for (int c = 0; c < W; c++)
+			{
+				if (arr[r][c] == 0)
+				{
+					return 0;
+				}
+			}
+		}
 		return 1;
 	}
 	// if this cell is wall or filled
@@ -79,7 +89,7 @@ int solve(int(*arr)[20], int H, int W, int idx)
 			std::cout << "----------------------\n";
 		}
 	}
-	return ret;
+	return ret + solve(arr, H, W, idx + 1);
 }
 
 int main(void)
