@@ -48,7 +48,7 @@ while True:
         arr[sr][sc] = 0
         cnt += 1
         if cnt == size:
-            size += 1
+            size += 1 
             cnt = 0
         answer += can_eat_len
     else:
