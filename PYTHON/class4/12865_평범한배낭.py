@@ -8,4 +8,5 @@ items.sort()
 # dp[N] = set
 dp = [0] * (N + 1)
 for n in range(items[0][0], N + 1):
-    dp[n] =
+    # dp[n] =
+    pass
