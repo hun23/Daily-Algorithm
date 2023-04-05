@@ -6,9 +6,10 @@ def get_coordinate(arr, co):
             return idx//10, idx%10
     return None
 
+
 def recursion(arr, paper_count, prev_coordinate):
     global answer, answer_list
-    coordinate = get_coordinate(arr, prev_coordinate)  # get next coordinate with 1
+    coordinate = get_coordinate(arr, prev_coordinate)  # get next coordinate of cell with 1
     used_paper_count = 25 - sum(paper_count)
     if coordinate is None:  # when filled with all 0s
         if answer > used_paper_count:
@@ -17,7 +18,7 @@ def recursion(arr, paper_count, prev_coordinate):
         return
     elif sum(paper_count) == 0:  # when all papers are used
         return
-    elif answer < used_paper_count:  # prunning
+    elif answer < used_paper_count:  # pruning
         return
 
     # check possible max paper length at the coordinate
@@ -26,10 +27,9 @@ def recursion(arr, paper_count, prev_coordinate):
     while length <= 5:
         stop = False
         for idx in range(length * length):
-            # a, b = r + idx//length, c + idx%length
-            if arr[r + idx//length][c + idx%length] == 0:
+            if arr[r + idx//length][c + idx%length] == 0:  # check paper length with arr
                 stop = True
-            if r + length > 10 or c + length > 10:
+            if r + length > 10 or c + length > 10:  # check index range
                 stop = True
             if stop:
                 break
@@ -37,16 +37,13 @@ def recursion(arr, paper_count, prev_coordinate):
             break
         length += 1
     length -= 1
-    # print(length)
-    # while arr[r + length][c] == 1 and arr[r][c + length] == 1:  # need to check diagonally
-    #     length += 1
-    #     if r + length >= 10 or c + length >= 10 or length >= 5:
-    #         break
-    # print(length)
+
+    # put paper if count is not 0
     for len_ in range(length, 0, -1):
-        if paper_count[len_] == 0:
+        if paper_count[len_] == 0:  # if paper of that lenght is all used
             continue
-        # change arr
+
+        # change arr to 0
         for i in range(len_):
             for j in range(len_):
                 arr[r + i][c + j] = 0
