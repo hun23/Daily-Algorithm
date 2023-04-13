@@ -59,24 +59,24 @@ def move_blocks(d):
         move(False, True)
     else:           # right
         move(True, True)
+    print(f"move: {'UDLR'[d]}")
+    for a in arr:
+        print(a)
     return
 
 
 def solve(cnt):
     global answer, arr
-    temp = get_max(arr)
-    if answer < temp:
-        answer = temp
     if cnt == 5:
         return
     # check answer
+    temp = get_max(arr)
+    if answer < temp:
+        answer = temp
     for d in range(4):
         # save & move
         original = [a[:] for a in arr]
         move_blocks(d)
-        # print(f"move: {'UDLR'[d]} / cnt: {cnt}")
-        # for a in arr:
-        #     print(a)
         # solve
         solve(cnt + 1)
         # reset
@@ -84,11 +84,17 @@ def solve(cnt):
     return
 
 
+
 dr = [-1, 1, 0, 0]
 dc = [0, 0, -1, 1]
 
 N = int(input())
 arr = [[-1] * (N + 2)] + [[-1] + list(map(int, input().split())) + [-1] for _ in range(N)] + [[-1] * (N + 2)]
-answer = 0
-solve(0)
+answer = get_max(arr)
+# solve(0)
+move_blocks(2)
+move_blocks(0)
+move_blocks(2)
+move_blocks(1)
+move_blocks(3)
 print(answer)

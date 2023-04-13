@@ -1,14 +1,29 @@
+from collections import deque
+
+
 def get_max(arr):
     return max(sum(arr, []))
 
 
-def move(reverse, transpose):
+def to_tuple(cnt, arr):
+    return (cnt, tuple(sum(arr, [])))
+
+def to_arr(tp):
+    global N
+    ret = []
+    tp = list(*tp)
+    for n in range(N + 2):
+        s, e = n * (N + 2), (n + 1) * (N + 2)
+        ret.append(tp[s:e])
+    return ret
+
+
+def move(arr, reverse, transpose):
     itr = range(1, N + 1)
     move_direction = -1
     if reverse:
         itr = range(N, 0, -1)
         move_direction = 1
-    global arr
     for n in range(1, N + 1):
         fixed = []
         for i in itr:
@@ -47,27 +62,37 @@ def move(reverse, transpose):
                         arr[i][n] = 0
                         arr[next_idx + (-1 * move_direction)][n] = move_this
                 break
+    ret = [a[:] for a in arr]
+    return ret
 
 
-def move_blocks(d):
-    global arr
+def move_blocks(arr, d):
+    arr = [a[:] for a in arr]
     if d == 0:      # up
-        move(False, False)
+        ret = move(arr, False, False)
     elif d == 1:    # down
-        move(True, False)
+        ret = move(arr, True, False)
     elif d == 2:    # left
-        move(False, True)
+        ret = move(arr, False, True)
     else:           # right
-        move(True, True)
-    return
+        ret = move(arr, True, True)
+    return ret
 
 
 def solve(cnt):
-    global answer, arr
+    global answer, arr, memo, cut_count, call_count
+    call_count += 1
+    tp = to_tuple(arr, cnt)
+    if memo.get(tp) is not None:
+        cut_count += 1
+        return
+    else:
+        memo[tp] = True
+
     temp = get_max(arr)
     if answer < temp:
         answer = temp
-    if cnt == 5:
+    if cnt == 10:
         return
     # check answer
     for d in range(4):
@@ -87,8 +112,36 @@ def solve(cnt):
 dr = [-1, 1, 0, 0]
 dc = [0, 0, -1, 1]
 
+memo = dict()
 N = int(input())
 arr = [[-1] * (N + 2)] + [[-1] + list(map(int, input().split())) + [-1] for _ in range(N)] + [[-1] * (N + 2)]
 answer = 0
-solve(0)
+cut_count, call_count = 0, 0
+# solve(0)
+# print(answer)
+# print(cut_count)
+# print(call_count)
+
+start = to_tuple(0, arr)
+start = start
+q = deque([start])
+memo[start] = True
+while q:
+    temp = q.popleft()
+    cur_cnt, cur = temp[0], to_arr(temp[1:])
+    # print("-"*30)
+    # print(path)
+    # for a in cur:
+    #     print(a)
+    for d in range(4):
+        nex = move_blocks(cur, d)
+        value = get_max(nex)
+        if answer < value:
+            answer = value
+        if cur_cnt + 1 >= 10:
+            continue
+        nex = to_tuple(cur_cnt + 1, nex)
+        if memo.get(nex) is None:
+            memo[nex] = True
+            q.append(nex)
 print(answer)

@@ -2,6 +2,10 @@ def get_max(arr):
     return max(sum(arr, []))
 
 
+def to_tuple(cnt, arr):
+    return (cnt, tuple(sum(arr, [])))
+
+
 def move(reverse, transpose):
     itr = range(1, N + 1)
     move_direction = -1
@@ -63,12 +67,19 @@ def move_blocks(d):
 
 
 def solve(cnt):
-    global answer, arr
-    temp = get_max(arr)
-    if answer < temp:
-        answer = temp
-    if cnt == 5:
-        return
+    global arr, dp, call_count
+
+    call_count += 1
+
+    tupled = to_tuple(cnt, arr)
+    if dp.get(tupled) is not None:
+        return dp[tupled]
+
+    if cnt == 10:
+        return get_max(arr)
+
+    # dp
+    ret = 0
     # check answer
     for d in range(4):
         # save & move
@@ -78,17 +89,19 @@ def solve(cnt):
         # for a in arr:
         #     print(a)
         # solve
-        solve(cnt + 1)
+        ret = max(ret, solve(cnt + 1))
         # reset
         arr = [o[:] for o in original]
-    return
+    dp[tupled] = ret
+    return dp[tupled]
 
 
 dr = [-1, 1, 0, 0]
 dc = [0, 0, -1, 1]
+dp = dict()
 
 N = int(input())
 arr = [[-1] * (N + 2)] + [[-1] + list(map(int, input().split())) + [-1] for _ in range(N)] + [[-1] * (N + 2)]
-answer = 0
-solve(0)
-print(answer)
+call_count = 0
+print(solve(0))
+# print(call_count)
