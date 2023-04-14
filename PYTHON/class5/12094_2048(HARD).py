@@ -1,9 +1,19 @@
+from datetime import datetime
+
+
 def get_max(arr):
     return max(sum(arr, []))
 
 
-def to_tuple(cnt, arr):
-    return (cnt, tuple(sum(arr, [])))
+# def to_tuple(cnt, arr):
+#     return (cnt, tuple(sum(arr, [])))
+#
+def to_tuple(arr):
+    return tuple(sum(arr, []))
+
+
+def is_same(a1, a2):
+    return a1 == a2
 
 
 def move(reverse, transpose):
@@ -67,16 +77,21 @@ def move_blocks(d):
 
 
 def solve(cnt):
-    global arr, dp, call_count
+    global arr, dp, call_count, COUNT
 
     call_count += 1
 
-    tupled = to_tuple(cnt, arr)
-    if dp.get(tupled) is not None:
-        return dp[tupled]
+    # tupled = to_tuple(cnt, arr)
+    tupled = to_tuple(arr)
+    if dp[cnt].get(tupled) is not None: # pruning 1
+        return dp[cnt][tupled]
 
-    if cnt == 10:
-        return get_max(arr)
+    cur_max = get_max(arr)
+    if dp[cnt][0] // 2 > cur_max:       # pruning 2
+        return 0
+
+    if cnt == COUNT:
+        return cur_max
 
     # dp
     ret = 0
@@ -89,19 +104,29 @@ def solve(cnt):
         # for a in arr:
         #     print(a)
         # solve
+        if is_same(original, arr):
+            continue
         ret = max(ret, solve(cnt + 1))
         # reset
-        arr = [o[:] for o in original]
-    dp[tupled] = ret
-    return dp[tupled]
+        arr = original
+    dp[cnt][tupled] = ret
+    if ret > dp[cnt][0]:
+        dp[cnt][0] = ret  # max at current cnt
+    return dp[cnt][tupled]
 
+# tupled 대신 d-path로?
 
 dr = [-1, 1, 0, 0]
 dc = [0, 0, -1, 1]
-dp = dict()
+dp = [dict() for i in range(11)]
+for i in range(11):
+    dp[i][0] = 0
 
 N = int(input())
 arr = [[-1] * (N + 2)] + [[-1] + list(map(int, input().split())) + [-1] for _ in range(N)] + [[-1] * (N + 2)]
+COUNT = 5
+stt = datetime.now()
 call_count = 0
 print(solve(0))
 # print(call_count)
+# print(f"time: {(datetime.now() - stt)}")
