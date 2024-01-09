@@ -2,6 +2,9 @@ from sys import stdin, stdout
 input = stdin.readline
 print = stdout.write
 
+def println(s):
+    print(f"{s}\n")
+
 N = int(input())
 numbers = list(map(int, input().split()))
 
@@ -16,6 +19,7 @@ for num in numbers:
             temp[i] = temp.get(i, 0) + 1
             num //= i
     if num != 1:
+        total[num] = total.get(num, 0) + 1
         temp[num] = 1
     # print(f"temp: {temp}\n")
     divided_list.append(temp)
@@ -25,13 +29,20 @@ target = dict()
 for key, val in total.items():
     target[key] = val // N
 
+# println(f"total:{total}")
+# println(f"target:{target}")
+
 # 횟수 구하기
 ans = 0
 target_val = 1
 for key, val in target.items():
+    if val == 0:
+        continue
     target_val *= (key**val)
     # print(f"key:{key}, val: {val}\n")
     for divided in divided_list:
-        ans += abs(val - divided.get(key, 0))
-        # print(f"ans:{ans}\n")
-print(f"{target_val} {ans//2}\n")
+        diff = val - divided.get(key, 0)
+        if diff > 0:
+            ans += diff
+            # print(f"ans:{ans}\n")
+print(f"{target_val} {ans}\n")
