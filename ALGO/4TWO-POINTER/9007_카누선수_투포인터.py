@@ -11,7 +11,7 @@ def println(s):
 T = int(input())
 for t in range(T):
     K, N = map(int, input().split())
-    arr = [list(map(int, input().split())) for _ in range(4)]
+    arr = [sorted(list(map(int, input().split()))) for _ in range(4)]
 
     pairs = [[], []]
     for a in range(N):
