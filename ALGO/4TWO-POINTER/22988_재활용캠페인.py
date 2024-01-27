@@ -34,9 +34,9 @@ if arr[-1] == X:
     max_idx = arr.index(X)
     ans += N - max_idx
     arr = arr[:max_idx]
-
 # 최소낭비 = A+B가 X/2를 넘어가되 최소로만
 # 4 6, 2 3 3 4
+
 
 left, right = 0, 1
 delete_later = []
