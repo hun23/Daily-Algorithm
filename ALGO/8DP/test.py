@@ -1,6 +1,7 @@
 import random
-from sys import stdin, stdout
+from sys import stdin, stdout, setrecursionlimit
 
+setrecursionlimit(100000)
 input = stdin.readline
 
 
@@ -8,44 +9,47 @@ def println(s):
     stdout.write(f"{s}\n")
 
 
-def s1(N, arr):
-    dp = [[1001] * 3 for _ in range(N)]  # i 인덱스를 r, g, b 색으로 칠하는 최소비용
+def recur(N, K, items, idx, weight):
+    if idx > N or weight > K:
+        return -(100_000 * 101)
+    if idx == N:
+        return 0
 
-    # 초기값 설정
-    for i in range(3):
-        dp[0][i] = arr[0][i]
+    ret = max(
+        recur(N, K, items, idx + 1, weight),
+        recur(N, K, items, idx + 1, weight + items[idx][0]) + items[idx][1],
+    )
+    return ret
 
+
+def s2(N, K, items):
+    # i번째 아이템까지 고르고 무게가 W인 경우 최대 V를 저장
+    dp = [[-1] * (K + 1) for _ in range(N)]
+    # print(recur(0, 0))
+    if items[0][0] <= K:
+        dp[0][items[0][0]] = items[0][1]
+    dp[0][0] = 0
     for i in range(1, N):
-        for color in range(3):  # i 인덱스를 color로 칠하려면
-            temp = 1001 * N
-            for prev_color in range(3):
-                if color == prev_color:  # 이전과 다른 색으로 칠한 비용
-                    continue
-                temp = min(temp, dp[i - 1][prev_color])  # 중 최소
-            temp += arr[i][color]  # 더하기 i 인덱스를 color로 칠하는데 필요한 비용
-            dp[i][color] = temp
-    return min(dp[-1])
+        for j in range(K + 1):
+            if dp[i - 1][j] == -1:
+                continue
+            # i번째 아이템을 고른 경우
+            if j + items[i][0] <= K:
+                dp[i][j + items[i][0]] = max(
+                    dp[i][j + items[i][0]], dp[i - 1][j] + items[i][1]
+                )
+            # i번째 아이템을 고르지 않은 경우
+            dp[i][j] = max(dp[i][j], dp[i - 1][j])
+    return max(dp[-1])
 
 
-def s2(N, RGBs):
-    dp = [[0] * 3 for _ in range(N)]
-    for color in range(3):
-        dp[N - 1][color] = RGBs[N - 1][color]
-    for n in range(N - 1 - 1, -1, -1):
-        for i in range(3):
-            temp = 2147483647
-            for j in range(3):
-                if i != j:
-                    temp = min(temp, RGBs[n][i] + dp[n + 1][j])
-            dp[n][i] = temp
-    return min(dp[0])
-
-
-for t in range(100):
-    N = random.randint(2, 1000)
-    arr = [[random.randint(1, 1000) for _ in range(3)] for _ in range(N)]
-    a, b = s1(N, arr), s2(N, arr)
+for t in range(10):
+    N, K = random.randint(1, 10), random.randint(1, 100_000)
+    items = [
+        tuple((random.randint(1, 100_000), random.randint(0, 1000))) for _ in range(N)
+    ]
+    a, b = recur(N, K, items, 0, 0), s2(N, K, items)
     if a != b:
         print("=" * 100)
         print(a, b)
-        print(N, arr)
+        print(N, K, items)
